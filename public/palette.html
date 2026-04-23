@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DWAIT · Palette v2 — Nude + Burgundy + Brown</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* base — nude / natural lights */
+      --bone:        #F5EFE8;
+      --bone-light:  #FAF6EF;
+      --bone-deep:   #EAE1D3;
+      --sand:        #E8DECB;
+      --linen:       #EFE6D5;
+
+      /* accent — burgundy / dark red */
+      --burgundy:        #6E1F2A;
+      --burgundy-deep:   #4A141D;
+      --burgundy-soft:   #7A3840;
+
+      /* secondary — brown */
+      --brown:      #8B6F54;
+      --brown-soft: #B8A088;
+      --brown-deep: #5C4836;
+
+      /* ink */
+      --ink:       #1F1A17;
+      --ink-soft:  #7A6F62;
+      --ink-faint: #B9AD93;
+
+      --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px;
+      --s6: 32px; --s7: 48px; --s8: 64px; --s9: 96px; --s10: 128px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: var(--bone);
+      color: var(--ink);
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: 'ss01', 'ss02';
+    }
+
+    body {
+      padding: var(--s9) var(--s7);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s3);
+      margin-bottom: var(--s6);
+    }
+    .eyebrow .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--burgundy);
+    }
+    .eyebrow .rule {
+      width: 40px; height: 1px;
+      background: var(--ink-faint);
+    }
+
+    h1.display {
+      font-size: 72px;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      font-weight: 300;
+      font-variation-settings: 'opsz' 144;
+      margin-bottom: var(--s6);
+    }
+    h1.display em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--burgundy);
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      font-weight: 400;
+      margin-bottom: var(--s5);
+    }
+    h2 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--burgundy);
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      font-weight: 500;
+      margin-bottom: var(--s3);
+    }
+
+    p.lede {
+      font-size: 19px;
+      line-height: 1.5;
+      color: var(--ink);
+      max-width: 56ch;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      max-width: 58ch;
+    }
+
+    hr.div {
+      border: 0;
+      border-top: 1px solid var(--ink-faint);
+      margin: var(--s10) 0 var(--s8);
+      opacity: 0.5;
+    }
+
+    /* ============ SWATCH GRID ============ */
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--s4);
+      margin: var(--s7) 0;
+    }
+    .swatch {
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid rgba(31,26,23,0.08);
+    }
+    .swatch .chip {
+      height: 140px;
+    }
+    .swatch .meta {
+      padding: var(--s4);
+      background: var(--bone-light);
+      border-top: 1px solid rgba(31,26,23,0.06);
+    }
+    .swatch .name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .swatch .hex {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-soft);
+    }
+
+    /* ============ HERO MOCKUP ============ */
+    .hero-mock {
+      background: var(--bone);
+      padding: var(--s9) var(--s8);
+      border: 1px solid rgba(31,26,23,0.1);
+      border-radius: 2px;
+      margin: var(--s7) 0;
+    }
+    .hero-mock .tag {
+      font-size: 15px;
+      font-style: italic;
+      color: var(--ink-soft);
+      max-width: 46ch;
+      line-height: 1.55;
+      margin-top: var(--s5);
+      font-weight: 300;
+    }
+
+    /* ============ BUTTON ============ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s3);
+      padding: 14px 28px;
+      background: var(--burgundy);
+      color: var(--bone-light);
+      font-family: 'Fraunces', serif;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 200ms ease;
+      margin-top: var(--s6);
+    }
+    .btn:hover { background: var(--burgundy-deep); }
+    .btn .arrow {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s3);
+      padding: 14px 28px;
+      background: transparent;
+      color: var(--burgundy);
+      border: 1px solid var(--burgundy);
+      font-family: 'Fraunces', serif;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-left: var(--s3);
+      margin-top: var(--s6);
+    }
+
+    /* ============ CARD SAMPLES ============ */
+    .card-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s6);
+      margin-top: var(--s7);
+    }
+    .card {
+      background: var(--bone-light);
+      border: 1px solid rgba(31,26,23,0.1);
+      border-radius: 6px;
+      padding: var(--s7);
+    }
+    .card .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--burgundy);
+      text-transform: uppercase;
+      margin-bottom: var(--s5);
+    }
+    .card h3 em {
+      font-style: italic;
+      color: var(--burgundy);
+      font-weight: 500;
+    }
+
+    /* ============ TYPE SPECIMEN ============ */
+    .specimen {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: var(--s5);
+      padding: var(--s5) 0;
+      border-top: 1px dotted rgba(31,26,23,0.2);
+      align-items: baseline;
+    }
+    .specimen .lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .specimen .sample {
+      color: var(--ink);
+    }
+
+    /* ============ PRICING ROW ============ */
+    .pricing {
+      display: flex;
+      align-items: baseline;
+      gap: var(--s4);
+      margin-top: var(--s5);
+    }
+    .pricing .amount {
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--burgundy);
+      letter-spacing: -0.02em;
+      font-variation-settings: 'opsz' 96;
+    }
+    .pricing .split {
+      font-size: 14px;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    /* ============ TAGS ============ */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s2);
+      margin-top: var(--s5);
+    }
+    .tag-pill {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--sand);
+      color: var(--brown-deep);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span class="mono">Palette v2 · April 2026</span>
+    <span class="rule"></span>
+    <span class="mono">/preview</span>
+  </div>
+
+  <h1 class="display">
+    Nude, burgundy,<br>
+    a touch of <em>brown</em>.
+  </h1>
+
+  <p class="lede">
+    Restrained tones for a confident, grown-up brand —
+    soft naturals as the canvas, burgundy as the single
+    emphasis. No terracotta, no pink, no clichés.
+  </p>
+
+  <hr class="div" />
+
+  <!-- SWATCHES: BASE -->
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span class="mono">01 · Base — Nude + natural lights</span>
+    <span class="rule"></span>
+  </div>
+
+  <div class="swatches">
+    <div class="swatch">
+      <div class="chip" style="background: #F5EFE8;"></div>
+      <div class="meta"><div class="name">Bone</div><div class="hex">#F5EFE8</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #FAF6EF;"></div>
+      <div class="meta"><div class="name">Bone light</div><div class="hex">#FAF6EF</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #EAE1D3;"></div>
+      <div class="meta"><div class="name">Bone deep</div><div class="hex">#EAE1D3</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #E8DECB;"></div>
+      <div class="meta"><div class="name">Sand</div><div class="hex">#E8DECB</div></div>
+    </div>
+  </div>
+
+  <!-- SWATCHES: ACCENT -->
+  <div class="eyebrow" style="margin-top: var(--s7);">
+    <span class="dot"></span>
+    <span class="mono">02 · Accent — Burgundy</span>
+    <span class="rule"></span>
+  </div>
+
+  <div class="swatches">
+    <div class="swatch">
+      <div class="chip" style="background: #6E1F2A;"></div>
+      <div class="meta"><div class="name">Burgundy</div><div class="hex">#6E1F2A</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #4A141D;"></div>
+      <div class="meta"><div class="name">Burgundy deep</div><div class="hex">#4A141D</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #7A3840;"></div>
+      <div class="meta"><div class="name">Burgundy soft</div><div class="hex">#7A3840</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #EFE6D5;"></div>
+      <div class="meta"><div class="name">Linen</div><div class="hex">#EFE6D5</div></div>
+    </div>
+  </div>
+
+  <!-- SWATCHES: BROWN + INK -->
+  <div class="eyebrow" style="margin-top: var(--s7);">
+    <span class="dot"></span>
+    <span class="mono">03 · Secondary — Brown + ink</span>
+    <span class="rule"></span>
+  </div>
+
+  <div class="swatches">
+    <div class="swatch">
+      <div class="chip" style="background: #8B6F54;"></div>
+      <div class="meta"><div class="name">Brown</div><div class="hex">#8B6F54</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #B8A088;"></div>
+      <div class="meta"><div class="name">Brown soft</div><div class="hex">#B8A088</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #5C4836;"></div>
+      <div class="meta"><div class="name">Brown deep</div><div class="hex">#5C4836</div></div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #1F1A17;"></div>
+      <div class="meta"><div class="name">Ink</div><div class="hex">#1F1A17</div></div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- HERO MOCKUP -->
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span class="mono">04 · In context — Hero</span>
+    <span class="rule"></span>
+  </div>
+
+  <div class="hero-mock">
+    <div class="eyebrow" style="margin-bottom: var(--s6);">
+      <span class="dot"></span>
+      <span class="mono">For women finding their footing</span>
+      <span class="rule"></span>
+      <span class="mono">/dwait</span>
+    </div>
+
+    <h1 class="display" style="font-size: 84px;">
+      Everything <em>shifted.</em><br>
+      And now you're not sure<br>
+      which way is <em>forward</em>.
+    </h1>
+
+    <p class="tag">
+      Motherhood doesn't pause you — it transforms you entirely.
+      Your priorities, your sense of self, your relationship with
+      work. DWAIT is the space where you find your direction.
+    </p>
+
+    <a href="#" class="btn">
+      Book a first call <span class="arrow">→</span>
+    </a>
+    <a href="#" class="btn-ghost">
+      For companies
+    </a>
+  </div>
+
+  <!-- CARDS: 1:1 vs Corporate -->
+  <div class="eyebrow" style="margin-top: var(--s8);">
+    <span class="dot"></span>
+    <span class="mono">05 · In context — Two offers</span>
+    <span class="rule"></span>
+  </div>
+
+  <div class="card-row">
+    <div class="card">
+      <div class="num">01 · For you</div>
+      <h3>Her Next <em>Chapter</em></h3>
+      <p>4 months · 1:1 coaching. Eight bi-weekly sessions, Voxer support
+      between calls, one emergency 30-minute session whenever you need it.</p>
+      <div class="pricing">
+        <span class="amount">€1,297</span>
+        <span class="split">or 2 × €675</span>
+      </div>
+      <div class="tags">
+        <span class="tag-pill">Identity</span>
+        <span class="tag-pill">Clarity</span>
+        <span class="tag-pill">Momentum</span>
+      </div>
+    </div>
+
+    <div class="card" style="background: var(--bone-deep);">
+      <div class="num">02 · For companies</div>
+      <h3>Her Next Chapter <em>Live</em></h3>
+      <p>Two half-days · 8–12 women · cross-company cohorts. A retreat-like
+      programme for women returning from maternity leave — plus an
+      anonymised insight report for the employer.</p>
+      <div class="pricing">
+        <span class="amount" style="font-size: 28px;">On request</span>
+      </div>
+      <div class="tags">
+        <span class="tag-pill">Day 01 — Who am I now?</span>
+        <span class="tag-pill">Day 02 — Where am I going?</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- TYPE SPECIMEN -->
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span class="mono">06 · Type on new palette</span>
+    <span class="rule"></span>
+  </div>
+
+  <div style="margin-top: var(--s6);">
+    <div class="specimen">
+      <div class="lbl">Display</div>
+      <div class="sample" style="font-size: 64px; line-height: 1; letter-spacing: -0.035em; font-weight: 300; font-variation-settings: 'opsz' 144;">
+        Everything <em style="font-style: italic; color: var(--burgundy); font-weight: 400;">shifted.</em>
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">H2</div>
+      <div class="sample" style="font-size: 36px; line-height: 1.1; letter-spacing: -0.025em;">
+        Not sure which direction to <em style="font-style: italic; color: var(--burgundy);">push?</em>
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">H3</div>
+      <div class="sample" style="font-size: 22px; letter-spacing: -0.015em; font-weight: 500;">
+        Rebuild on your own terms.
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">Body</div>
+      <div class="sample" style="font-size: 16px; line-height: 1.65; color: var(--ink-soft); max-width: 56ch; font-weight: 300;">
+        You are driven, educated, and accomplished. Motherhood
+        has changed you — beautifully so — but somewhere in
+        the transition, your professional identity got blurry.
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">Meta</div>
+      <div class="sample mono" style="color: var(--burgundy);">
+        FOR WOMEN FINDING THEIR FOOTING
+      </div>
+    </div>
+  </div>
+
+  <hr class="div" />
+
+  <!-- FOOTER -->
+  <p class="mono" style="text-align: center; color: var(--ink-faint);">
+    DWAIT · Palette v2 · bone + burgundy + brown
+  </p>
+
+</body>
+</html>

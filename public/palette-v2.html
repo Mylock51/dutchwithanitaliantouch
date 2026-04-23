@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DWAIT · Palette v2.1 — Paige twist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bone:        #F5EFE8;
+      --bone-light:  #FAF6EF;
+      --bone-deep:   #EAE1D3;
+      --sand:        #E8DECB;
+      --linen:       #EFE6D5;
+
+      --burgundy:      #6E1F2A;
+      --burgundy-deep: #4A141D;
+      --burgundy-soft: #7A3840;
+
+      --brown:      #8B6F54;
+      --brown-soft: #B8A088;
+      --brown-deep: #5C4836;
+
+      --ink:       #1F1A17;
+      --ink-soft:  #7A6F62;
+      --ink-faint: #B9AD93;
+
+      --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px;
+      --s6: 32px; --s7: 48px; --s8: 64px; --s9: 96px; --s10: 128px;
+      --s11: 180px; --s12: 240px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: var(--bone);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: 'ss01';
+    }
+
+    body {
+      padding: var(--s12) var(--s9) var(--s11);
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    /* ============ TYPE ============ */
+    .serif { font-family: 'Fraunces', Georgia, serif; font-feature-settings: 'ss01', 'ss02'; }
+    .sans  { font-family: 'Inter', sans-serif; }
+    .mono  { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+    .meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s4);
+      margin-bottom: var(--s8);
+    }
+    .eyebrow .dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--burgundy);
+    }
+
+    h1.display {
+      font-family: 'Fraunces', serif;
+      font-size: 84px;
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      font-weight: 250;
+      font-variation-settings: 'opsz' 144;
+      margin-bottom: var(--s7);
+      max-width: 14ch;
+    }
+    h1.display em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--burgundy);
+    }
+
+    p.lede {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      max-width: 52ch;
+      font-weight: 400;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: 40px;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      font-weight: 300;
+      font-variation-settings: 'opsz' 96;
+      max-width: 18ch;
+      margin-bottom: var(--s5);
+    }
+    .section-title em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--burgundy);
+    }
+
+    .section-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      max-width: 54ch;
+      font-weight: 400;
+    }
+
+    /* ============ DIVIDER ============ */
+    .rule-divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--s4);
+      margin: var(--s12) 0;
+      opacity: 0.5;
+    }
+    .rule-divider .line { width: 40px; height: 1px; background: var(--ink-faint); }
+    .rule-divider .ornament {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--ink-faint);
+    }
+
+    /* ============ SWATCHES ============ */
+    .swatch-section { margin: var(--s10) 0; }
+    .swatch-section + .swatch-section { margin-top: var(--s11); }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--s5);
+    }
+    .swatch .chip {
+      height: 180px;
+      border-radius: 2px;
+      border: 1px solid rgba(31,26,23,0.06);
+    }
+    .swatch .meta-block {
+      margin-top: var(--s4);
+    }
+    .swatch .name {
+      font-family: 'Fraunces', serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .swatch .hex {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+    }
+
+    /* ============ HERO MOCK ============ */
+    .hero-mock {
+      padding: var(--s10) 0 var(--s9);
+    }
+    .hero-mock .tag {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: 44ch;
+      margin-top: var(--s7);
+    }
+
+    /* ============ CTAs — arrow-link style ============ */
+    .cta-row {
+      display: flex;
+      align-items: center;
+      gap: var(--s8);
+      margin-top: var(--s9);
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s3);
+      padding: 16px 32px;
+      background: var(--burgundy);
+      color: var(--bone-light);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 240ms ease;
+    }
+    .btn-primary:hover { background: var(--burgundy-deep); }
+    .btn-primary .arrow {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s3);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--ink);
+      transition: color 200ms ease, border-color 200ms ease;
+    }
+    .btn-link:hover { color: var(--burgundy); border-color: var(--burgundy); }
+    .btn-link .arrow {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    /* ============ TWO OFFERS — airy editorial ============ */
+    .offers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s10);
+      margin-top: var(--s9);
+    }
+    .offer {
+      border-top: 1px solid var(--ink-faint);
+      padding-top: var(--s6);
+    }
+    .offer .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: var(--s6);
+    }
+    .offer h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      font-weight: 300;
+      margin-bottom: var(--s4);
+    }
+    .offer h3 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--burgundy);
+    }
+    .offer p {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      max-width: 40ch;
+    }
+    .offer .price {
+      margin-top: var(--s6);
+      padding-top: var(--s5);
+      border-top: 1px dotted var(--ink-faint);
+    }
+    .offer .amount {
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--burgundy);
+      letter-spacing: -0.02em;
+      font-variation-settings: 'opsz' 96;
+    }
+    .offer .amount.small { font-size: 22px; }
+    .offer .split {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: var(--ink-soft);
+      font-style: normal;
+      margin-left: var(--s3);
+    }
+    .offer .pillars {
+      margin-top: var(--s5);
+      display: flex;
+      gap: var(--s5);
+      flex-wrap: wrap;
+    }
+    .offer .pillar {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brown-deep);
+    }
+    .offer .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s2);
+      margin-top: var(--s6);
+      color: var(--burgundy);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+    .offer .cta-link .arrow {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 15px;
+    }
+
+    /* ============ TYPE SPECIMEN ============ */
+    .specimen {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: var(--s6);
+      padding: var(--s6) 0;
+      border-top: 1px dotted var(--ink-faint);
+      align-items: baseline;
+    }
+    .specimen .lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .specimen .sample { color: var(--ink); }
+
+    /* ============ COMPARE NOTE ============ */
+    .compare-bar {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--ink);
+      color: var(--bone-light);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      z-index: 10;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s3);
+    }
+    .compare-bar:hover { background: var(--burgundy-deep); }
+  </style>
+</head>
+<body>
+
+  <a class="compare-bar" href="/palette.html">← Compare v2</a>
+
+  <!-- MASTHEAD -->
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span class="meta">Palette v2.1 · Paige twist</span>
+  </div>
+
+  <h1 class="display">
+    Restrained,<br>
+    then <em>precise</em>.
+  </h1>
+
+  <p class="lede">
+    A quieter edit of the same palette. More whitespace,
+    softer type weights, burgundy reserved for emphasis
+    only — italic beats, primary CTA, price.
+  </p>
+
+  <div class="rule-divider">
+    <span class="line"></span>
+    <span class="ornament">✦</span>
+    <span class="line"></span>
+  </div>
+
+  <!-- SWATCHES -->
+  <div class="swatch-section">
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta">01 · Base — Nude</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="chip" style="background: #F5EFE8;"></div>
+        <div class="meta-block"><div class="name">Bone</div><div class="hex">#F5EFE8</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #FAF6EF;"></div>
+        <div class="meta-block"><div class="name">Bone light</div><div class="hex">#FAF6EF</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #EAE1D3;"></div>
+        <div class="meta-block"><div class="name">Bone deep</div><div class="hex">#EAE1D3</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #E8DECB;"></div>
+        <div class="meta-block"><div class="name">Sand</div><div class="hex">#E8DECB</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swatch-section">
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta">02 · Accent — Burgundy</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="chip" style="background: #6E1F2A;"></div>
+        <div class="meta-block"><div class="name">Burgundy</div><div class="hex">#6E1F2A</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #4A141D;"></div>
+        <div class="meta-block"><div class="name">Burgundy deep</div><div class="hex">#4A141D</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #7A3840;"></div>
+        <div class="meta-block"><div class="name">Burgundy soft</div><div class="hex">#7A3840</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #EFE6D5;"></div>
+        <div class="meta-block"><div class="name">Linen</div><div class="hex">#EFE6D5</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swatch-section">
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta">03 · Secondary — Brown + ink</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="chip" style="background: #8B6F54;"></div>
+        <div class="meta-block"><div class="name">Brown</div><div class="hex">#8B6F54</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #B8A088;"></div>
+        <div class="meta-block"><div class="name">Brown soft</div><div class="hex">#B8A088</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #5C4836;"></div>
+        <div class="meta-block"><div class="name">Brown deep</div><div class="hex">#5C4836</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #1F1A17;"></div>
+        <div class="meta-block"><div class="name">Ink</div><div class="hex">#1F1A17</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-divider">
+    <span class="line"></span>
+    <span class="ornament">✦</span>
+    <span class="line"></span>
+  </div>
+
+  <!-- HERO MOCK -->
+  <div class="hero-mock">
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta">For women finding their footing</span>
+    </div>
+
+    <h1 class="display" style="font-size: 104px; max-width: 16ch;">
+      Everything <em>shifted.</em>
+    </h1>
+
+    <p class="tag">
+      Motherhood doesn't pause you — it transforms you entirely.
+      DWAIT is the space where you find your direction.
+    </p>
+
+    <div class="cta-row">
+      <a href="#" class="btn-primary">
+        Book a first call <span class="arrow">→</span>
+      </a>
+      <a href="#" class="btn-link">
+        For companies <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="rule-divider">
+    <span class="line"></span>
+    <span class="ornament">✦</span>
+    <span class="line"></span>
+  </div>
+
+  <!-- TWO OFFERS -->
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span class="meta">Two paths</span>
+  </div>
+
+  <h2 class="section-title">
+    One works with you. One works with <em>your company.</em>
+  </h2>
+
+  <div class="offers">
+    <div class="offer">
+      <div class="num">01 — For you</div>
+      <h3>Her Next <em>Chapter</em></h3>
+      <p>Four months, 1:1. Eight bi-weekly 60-minute calls, async Voxer
+      support between sessions, one emergency 30-minute call whenever
+      you need it.</p>
+      <div class="price">
+        <span class="amount">€1,297</span>
+        <span class="split">or 2 × €675</span>
+      </div>
+      <div class="pillars">
+        <span class="pillar">Identity</span>
+        <span class="pillar">Clarity</span>
+        <span class="pillar">Momentum</span>
+      </div>
+      <a href="#" class="cta-link">Book a first call <span class="arrow">→</span></a>
+    </div>
+
+    <div class="offer">
+      <div class="num">02 — For companies</div>
+      <h3>Her Next Chapter <em>Live</em></h3>
+      <p>Two half-days, in person. Eight to twelve women, cross-company
+      cohorts. A retreat-shaped programme for returning mothers, plus an
+      anonymised insight report for the employer.</p>
+      <div class="price">
+        <span class="amount small">On request</span>
+      </div>
+      <div class="pillars">
+        <span class="pillar">Day 01 — Who am I now?</span>
+      </div>
+      <div class="pillars">
+        <span class="pillar">Day 02 — Where am I going?</span>
+      </div>
+      <a href="#" class="cta-link">Let's talk <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="rule-divider">
+    <span class="line"></span>
+    <span class="ornament">✦</span>
+    <span class="line"></span>
+  </div>
+
+  <!-- TYPE SPECIMEN -->
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span class="meta">04 · Type pairing — Fraunces + Inter</span>
+  </div>
+
+  <p class="section-sub" style="margin-bottom: var(--s7);">
+    Fraunces does the emotion — display, italics, pricing. Inter does the
+    structure — body, lede, UI. JetBrains Mono for meta only.
+  </p>
+
+  <div>
+    <div class="specimen">
+      <div class="lbl">Display</div>
+      <div class="sample serif" style="font-size: 72px; line-height: 0.98; letter-spacing: -0.04em; font-weight: 250; font-variation-settings: 'opsz' 144;">
+        Everything <em style="font-style: italic; color: var(--burgundy); font-weight: 300;">shifted.</em>
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">H2 · Serif</div>
+      <div class="sample serif" style="font-size: 40px; line-height: 1.05; letter-spacing: -0.03em; font-weight: 300;">
+        Not sure which direction to <em style="font-style: italic; color: var(--burgundy); font-weight: 400;">push?</em>
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">H3 · Serif</div>
+      <div class="sample serif" style="font-size: 22px; letter-spacing: -0.02em; font-weight: 400;">
+        Rebuild on your own terms.
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">Lede · Sans</div>
+      <div class="sample sans" style="font-size: 17px; line-height: 1.6; color: var(--ink-soft); max-width: 54ch; font-weight: 400;">
+        You are driven, educated, and accomplished. Motherhood has
+        changed you — beautifully so — but somewhere in the transition,
+        your professional identity got blurry.
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">Body · Sans</div>
+      <div class="sample sans" style="font-size: 14px; line-height: 1.7; color: var(--ink-soft); max-width: 52ch;">
+        Four months, 1:1. Eight bi-weekly 60-minute calls, async Voxer
+        support between sessions, one emergency 30-minute call whenever
+        you need it.
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="lbl">Meta · Mono</div>
+      <div class="sample mono" style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--burgundy); font-weight: 500;">
+        For women finding their footing
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-divider" style="margin-top: var(--s12);">
+    <span class="line"></span>
+    <span class="ornament">✦</span>
+    <span class="line"></span>
+  </div>
+
+  <p class="meta" style="text-align: center;">
+    DWAIT · v2.1 · Bone + burgundy + brown · Fraunces + Inter
+  </p>
+
+</body>
+</html>
