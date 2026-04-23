@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1440" />
+<title>Dutch with an Italian Touch — Brand Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ========= PAPER / INK ========= */
+    --paper:        #f2ebdc;
+    --paper-deep:   #e8dfc9;
+    --paper-warm:   #ede2c8;
+    --paper-light:  #f8f3e6;
+    --ink:          #1f1a14;
+    --ink-soft:     #8a7a64;
+    --ink-faint:    #b9ad93;
+
+    /* ========= BRAND ========= */
+    --terracotta:        #c2532a;
+    --terracotta-deep:   #8f3a1c;
+    --terracotta-light:  #e07d4f;
+    --moss:              #4a5d2a;
+    --moss-deep:         #2f3d18;
+    --moss-light:        #7a9445;
+    --ochre:             #c89234;
+    --ochre-deep:        #9a6f1f;
+    --ochre-light:       #e4b05a;
+
+    /* ========= STATUS ========= */
+    --status-good:  #4a5d2a;  /* moss */
+    --status-warn:  #c89234;  /* ochre */
+    --status-bad:   #8f3a1c;  /* terracotta-deep */
+    --status-info:  #8a7a64;  /* ink-soft */
+
+    /* ========= LINES ========= */
+    --line:         rgba(31, 26, 20, 0.18);
+    --line-strong:  rgba(31, 26, 20, 0.5);
+    --line-faint:   rgba(31, 26, 20, 0.08);
+
+    /* ========= GRADIENTS ========= */
+    --grad-paper:     linear-gradient(135deg, #f8f3e6 0%, #e8dfc9 100%);
+    --grad-terra:     linear-gradient(135deg, #e07d4f 0%, #8f3a1c 100%);
+    --grad-moss:      linear-gradient(135deg, #7a9445 0%, #2f3d18 100%);
+    --grad-ochre:     linear-gradient(135deg, #e4b05a 0%, #9a6f1f 100%);
+    --grad-dusk:      linear-gradient(135deg, #c2532a 0%, #c89234 50%, #4a5d2a 100%);
+
+    /* ========= SPACING (4px grid) ========= */
+    --s1:4px;  --s2:8px;  --s3:12px; --s4:16px; --s5:24px;
+    --s6:32px; --s7:48px; --s8:64px; --s9:96px; --s10:128px;
+
+    /* ========= RADIUS ========= */
+    --r-xs:2px; --r-sm:4px; --r-md:8px; --r-lg:12px; --r-xl:16px; --r-2xl:24px;
+
+    --hairline: 1px solid var(--line);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html, body { background: var(--paper); }
+  body{
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 14;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 15% 5%, rgba(194, 83, 42, 0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 60% at 90% 90%, rgba(74, 93, 42, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(200, 146, 52, 0.04) 0%, transparent 70%);
+  }
+  body::after{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.5;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ========= LAYOUT ========= */
+  .page{ max-width:1320px; margin:0 auto; padding: var(--s9) var(--s7) var(--s10); position:relative; z-index:1; }
+
+  /* ========= META / EYEBROW ========= */
+  .meta{
+    font-family: 'JetBrains Mono', monospace;
+    font-size:11px; font-weight:500;
+    letter-spacing:1.6px; text-transform:uppercase;
+    color: var(--ink-soft);
+  }
+  .meta.on-accent{ color: var(--terracotta); }
+
+  .eyebrow{
+    display:flex; align-items:center; gap: var(--s3);
+    margin-bottom: var(--s5);
+  }
+  .eyebrow .dot{
+    width:6px; height:6px; border-radius:50%;
+    background: var(--terracotta); box-shadow:0 0 10px rgba(194,83,42,0.4);
+  }
+  .eyebrow .rule{ flex:1; height:1px; background: var(--line); }
+  .eyebrow .num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px; color: var(--ink-soft);
+    letter-spacing:0.1em;
+  }
+
+  /* ========= SECTION ========= */
+  section{
+    padding: var(--s9) 0 var(--s7);
+    border-top: var(--hairline);
+  }
+  section:first-of-type{ border-top: none; }
+
+  h1.section-title{
+    font-family:'Fraunces', serif;
+    font-weight: 400;
+    font-size: 56px; line-height: 1.05;
+    letter-spacing: -0.03em;
+    font-variation-settings: "opsz" 144;
+    margin-bottom: var(--s3);
+    color: var(--ink);
+  }
+  h1.section-title em{
+    font-style: italic; font-weight: 500;
+    color: var(--terracotta-deep);
+  }
+  .section-sub{
+    font-size:18px; line-height:1.55;
+    color: var(--ink);
+    opacity: 0.75;
+    max-width: 620px;
+    margin-bottom: var(--s7);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* ========= CARDS ========= */
+  .card{
+    background: var(--paper-light);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .card.no-shadow{ box-shadow: none; }
+  .card.deep{ background: var(--paper-deep); }
+  .card.ink{ background: var(--ink); color: var(--paper-light); border-color: var(--ink); }
+  .card.ink .meta{ color: var(--ink-faint); }
+
+  /* ========================================================= */
+  /*                        COVER                              */
+  /* ========================================================= */
+  .cover{
+    position: relative;
+    min-height: 680px;
+    padding: var(--s9) var(--s8) var(--s8);
+    border-radius: var(--r-2xl);
+    overflow: hidden;
+    background: var(--paper-light);
+    border: 1px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+  .cover::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:
+      linear-gradient(to right, rgba(31,26,20,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(31,26,20,0.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+  }
+  .cover::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:
+      radial-gradient(ellipse 50% 40% at 80% 20%, rgba(194,83,42,0.14), transparent 60%),
+      radial-gradient(ellipse 40% 30% at 10% 90%, rgba(74,93,42,0.12), transparent 60%);
+  }
+
+  .cover-masthead{
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: auto 1fr auto;
+    gap: 40px; align-items: center;
+    padding-bottom: var(--s5);
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: var(--s8);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+  .cover-masthead .center{
+    text-align: center;
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: 14px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--terracotta);
+  }
+
+  .cover-grid{
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1.3fr auto;
+    gap: var(--s8); align-items: end; min-height: 380px;
+  }
+  .cover-title{
+    font-family:'Fraunces', serif;
+    font-weight: 400;
+    font-size: 112px; line-height: 0.92;
+    letter-spacing: -0.045em;
+    font-variation-settings: "opsz" 144;
+    color: var(--ink);
+  }
+  .cover-title .ital{
+    font-style: italic; font-weight: 500;
+    color: var(--terracotta-deep);
+  }
+  .cover-tag{
+    font-family:'Fraunces', serif;
+    font-size: 22px; line-height: 1.4;
+    font-style: italic; font-weight: 300;
+    color: var(--ink); opacity: 0.8;
+    margin-top: var(--s5); max-width: 520px;
+  }
+
+  .cover-mark{
+    width: 240px; height: 240px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .cover-mark svg{ width: 100%; height: 100%; }
+
+  .cover-foot{
+    position: relative; z-index: 2;
+    margin-top: var(--s8); padding-top: var(--s5);
+    border-top: 1px solid var(--ink);
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s5);
+  }
+  .cover-foot .cell .k{
+    font-family:'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--terracotta); letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: var(--s2); font-weight: 600;
+  }
+  .cover-foot .cell .v{
+    font-family:'Fraunces', serif;
+    font-size: 16px; color: var(--ink);
+  }
+
+  /* ========================================================= */
+  /*                        LOGOMARK                           */
+  /* ========================================================= */
+  .logo-grid{
+    display: grid; grid-template-columns: 1.3fr 1fr 1fr;
+    gap: var(--s5);
+  }
+  .logo-hero{
+    padding: var(--s8);
+    min-height: 440px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative; overflow: hidden;
+  }
+  .logo-hero .mark-xl{
+    width: 220px; height: 220px; margin: auto;
+  }
+  .logo-hero .mark-xl svg{ width: 100%; height: 100%; }
+  .logo-hero.on-dark{
+    background: var(--ink); color: var(--paper-light);
+    border-color: var(--ink);
+  }
+  .logo-hero.on-dark .meta{ color: var(--ink-faint); }
+
+  .clearspace{
+    padding: var(--s6);
+    min-height: 440px;
+    display: flex; flex-direction: column;
+    background: var(--paper-light);
+  }
+  .clearspace-canvas{
+    flex: 1; position: relative;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: var(--s4);
+  }
+  .clearspace-canvas .grid-lines{
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to right, rgba(194,83,42,0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(194,83,42,0.18) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .clearspace .mark-wrap{
+    position: relative;
+    width: 140px; height: 140px;
+    outline: 1px dashed var(--terracotta);
+    outline-offset: 40px;
+  }
+  .clearspace .mark-wrap svg{ width: 100%; height: 100%; }
+  .clearspace .labels{
+    display: flex; justify-content: space-between;
+    margin-top: var(--s6);
+  }
+  .clearspace .labels .val{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--terracotta-deep);
+  }
+
+  .logo-sizes{
+    padding: var(--s6);
+    min-height: 440px;
+    background: var(--paper-light);
+  }
+  .size-row{
+    display: flex; align-items: center; gap: var(--s5);
+    padding: var(--s4) 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .size-row:last-child{ border-bottom: none; }
+  .size-row .glyph{ display: flex; align-items: center; justify-content: center; }
+  .size-row .glyph svg{ display: block; }
+  .size-row .info{ flex: 1; }
+  .size-row .size{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--ink); font-weight: 500;
+  }
+  .size-row .use{
+    font-family:'Fraunces', serif; font-style: italic;
+    font-size: 13px; color: var(--ink-soft); margin-top: 2px;
+  }
+
+  /* wordmark */
+  .wordmark-demo{
+    padding: var(--s8);
+    display: flex; align-items: center; gap: var(--s6);
+    background: var(--paper-light);
+  }
+  .wordmark-demo .name{
+    font-family:'Fraunces', serif;
+    font-weight: 400;
+    font-size: 56px; line-height: 1;
+    letter-spacing: -0.03em;
+    font-variation-settings: "opsz" 144;
+    color: var(--ink);
+  }
+  .wordmark-demo .name em{
+    font-style: italic; font-weight: 500;
+    color: var(--terracotta-deep);
+  }
+
+  .wordmark-specs{
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: var(--s5); margin-top: var(--s6);
+  }
+  .spec-cell{
+    padding: var(--s4) var(--s5);
+    border-left: 2px solid var(--terracotta);
+    background: var(--paper-light);
+  }
+  .spec-cell .k{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px; color: var(--ink-soft);
+    text-transform: uppercase; letter-spacing: 0.15em;
+    margin-bottom: var(--s2); font-weight: 600;
+  }
+  .spec-cell .v{
+    font-family:'Fraunces', serif;
+    font-size: 18px; color: var(--ink); font-weight: 500;
+  }
+
+  /* dos / donts */
+  .dod{
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: var(--s4); margin-top: var(--s6);
+  }
+  .dod-cell{
+    aspect-ratio: 1;
+    border-radius: var(--r-md);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--line);
+    background: var(--paper-light);
+  }
+  .dod-cell .inner{
+    width: 56%; height: 56%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .dod-cell .inner svg{ width: 100%; height: 100%; }
+  .dod-cell .tag{
+    position: absolute; top: var(--s3); left: var(--s3);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;
+    padding: 3px 7px; border-radius: var(--r-xs); font-weight: 600;
+  }
+  .dod-cell .tag.ok{ background: rgba(74,93,42,0.18); color: var(--moss-deep); }
+  .dod-cell .tag.no{ background: rgba(143,58,28,0.18); color: var(--terracotta-deep); }
+  .dod-cell .note{
+    position: absolute; bottom: var(--s3); left: var(--s3); right: var(--s3);
+    font-family:'Fraunces', serif; font-style: italic;
+    font-size: 12px; color: var(--ink); opacity: 0.8; line-height: 1.3;
+  }
+
+  /* ========================================================= */
+  /*                        COLOR                              */
+  /* ========================================================= */
+  .palette-core{
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2px;
+    border-radius: var(--r-lg); overflow: hidden;
+    border: 1px solid var(--ink);
+    margin-bottom: var(--s5);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .palette-core .c{
+    padding: var(--s7) var(--s5) var(--s5);
+    min-height: 220px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+  }
+  .palette-core .c .lbl{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase; opacity: 0.7; font-weight: 600;
+  }
+  .palette-core .c .nm{
+    font-family:'Fraunces', serif;
+    font-size: 26px; font-weight: 500;
+    margin-top: var(--s2); letter-spacing: -0.02em;
+  }
+  .palette-core .c .hex{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px; opacity: 0.85;
+  }
+
+  .swatch-grid{
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: var(--s4);
+  }
+  .swatch{
+    border-radius: var(--r-md); overflow: hidden;
+    border: 1px solid var(--line);
+    display: flex; flex-direction: column;
+    background: var(--paper-light);
+  }
+  .swatch .chip{ height: 140px; position: relative; }
+  .swatch .chip .corner{
+    position: absolute; top: var(--s3); right: var(--s3);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px; padding: 2px 6px;
+    background: rgba(0,0,0,0.5); color: #fff;
+    border-radius: var(--r-xs);
+  }
+  .swatch .body{ padding: var(--s4); }
+  .swatch .nm{
+    font-family:'Fraunces', serif;
+    font-size: 15px; color: var(--ink);
+    font-weight: 500; margin-bottom: 2px;
+  }
+  .swatch .rl{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px; color: var(--ink-soft);
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+  .swatch .hex{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--ink); opacity: 0.75;
+    margin-top: var(--s3);
+  }
+
+  /* gradients */
+  .grad-row{
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: var(--s5);
+  }
+  .grad{
+    height: 180px; border-radius: var(--r-lg);
+    padding: var(--s5);
+    display: flex; flex-direction: column; justify-content: space-between;
+    border: 1px solid var(--line);
+    position: relative; overflow: hidden;
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .grad .nm{
+    font-family:'Fraunces', serif;
+    font-size: 20px; font-weight: 500;
+  }
+  .grad .v{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px; opacity: 0.9;
+  }
+
+  /* status */
+  .status-grid{
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: var(--s4);
+  }
+  .status-card{
+    padding: var(--s5);
+    border-radius: var(--r-md);
+    background: var(--paper-light);
+    border: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: var(--s3);
+  }
+  .status-card .head{
+    display: flex; align-items: center; gap: var(--s2);
+  }
+  .status-card .dot{
+    width: 10px; height: 10px; border-radius: 50%;
+  }
+  .status-card .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600;
+  }
+  .status-card .nm{
+    font-family:'Fraunces', serif;
+    font-size: 18px; color: var(--ink); font-weight: 500;
+  }
+  .status-card .hex{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-soft);
+  }
+
+  /* ========================================================= */
+  /*                     TYPOGRAPHY                            */
+  /* ========================================================= */
+  .type-table{
+    display: grid;
+    grid-template-columns: 180px 120px 1fr 180px;
+    border: 1px solid var(--ink);
+    border-radius: var(--r-lg); overflow: hidden;
+    background: var(--paper-light);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .type-row{
+    display: contents;
+  }
+  .type-row > *{
+    padding: var(--s5) var(--s5);
+    border-bottom: 1px solid var(--line);
+    display: flex; align-items: center;
+  }
+  .type-row.header > *{
+    background: var(--paper-deep);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--ink-soft);
+    font-weight: 600;
+  }
+  .type-row.last > *{ border-bottom: none; }
+  .type-row .lbl{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--terracotta); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.12em;
+  }
+  .type-row .size{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--ink-soft);
+  }
+  .type-row .sample{ color: var(--ink); }
+  .type-row .use{
+    font-family:'Fraunces', serif; font-style: italic;
+    font-size: 13px; color: var(--ink-soft);
+  }
+
+  .font-showcase{
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: var(--s5); margin-top: var(--s7);
+  }
+  .font-card{
+    padding: var(--s7);
+    background: var(--paper-light);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .font-card.dark{
+    background: var(--ink); color: var(--paper-light);
+  }
+  .font-card.dark .meta{ color: var(--ink-faint); }
+  .font-card .big{
+    font-family:'Fraunces', serif;
+    font-size: 120px; line-height: 1;
+    font-weight: 400; letter-spacing: -0.04em;
+    font-variation-settings: "opsz" 144;
+    margin: var(--s5) 0;
+  }
+  .font-card.mono .big{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 88px; letter-spacing: -0.03em;
+    font-weight: 400;
+  }
+  .font-card .axes{
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: var(--s4); margin-top: var(--s5);
+    padding-top: var(--s4);
+    border-top: 1px solid var(--line);
+  }
+  .font-card.dark .axes{ border-top-color: rgba(248,243,230,0.12); }
+  .font-card .axis .k{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;
+    opacity: 0.7; margin-bottom: var(--s2); font-weight: 600;
+  }
+  .font-card .axis .v{
+    font-family:'Fraunces', serif;
+    font-size: 16px;
+  }
+  .font-card.mono .axis .v{
+    font-family:'JetBrains Mono', monospace; font-size: 14px;
+  }
+
+  /* ========================================================= */
+  /*                  SPACING & RADIUS                         */
+  /* ========================================================= */
+  .space-demo{
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: var(--s5);
+  }
+  .space-ladder{
+    padding: var(--s6);
+    background: var(--paper-light);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .space-row{
+    display: grid; grid-template-columns: 60px 1fr 80px;
+    align-items: center; gap: var(--s4);
+    padding: var(--s3) 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .space-row:last-child{ border-bottom: none; }
+  .space-row .tk{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--terracotta); font-weight: 600;
+  }
+  .space-row .bar{
+    height: 10px; background: var(--terracotta);
+    border-radius: var(--r-xs);
+  }
+  .space-row .val{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--ink-soft); text-align: right;
+  }
+
+  .radius-grid{
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: var(--s4);
+  }
+  .radius-cell{
+    aspect-ratio: 1.2;
+    background: var(--paper-deep);
+    border: 2px solid var(--ink);
+    padding: var(--s4);
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+  }
+  .radius-cell .tk{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--terracotta); font-weight: 600;
+  }
+  .radius-cell .val{
+    font-family:'Fraunces', serif; font-style: italic;
+    font-size: 28px; color: var(--ink); font-weight: 500;
+  }
+
+  /* ========================================================= */
+  /*                     COMPONENTS                            */
+  /* ========================================================= */
+  .comp-grid{
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: var(--s5);
+  }
+  .comp-card{
+    padding: var(--s6);
+    background: var(--paper-light);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .comp-card .title{
+    font-family:'Fraunces', serif;
+    font-style: italic; font-weight: 500;
+    font-size: 20px; color: var(--ink);
+    margin-bottom: var(--s5);
+    padding-bottom: var(--s3);
+    border-bottom: 1px solid var(--line);
+  }
+  .comp-stack{
+    display: flex; flex-direction: column; gap: var(--s4);
+    align-items: flex-start;
+  }
+
+  /* buttons */
+  .btn{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 12px 22px;
+    border-radius: var(--r-sm);
+    border: 1px solid transparent;
+    cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn.primary{
+    background: var(--terracotta); color: #fff;
+    border-color: var(--terracotta-deep);
+  }
+  .btn.ink{
+    background: var(--ink); color: var(--paper-light);
+    border-color: var(--ink);
+  }
+  .btn.outline{
+    background: transparent; color: var(--ink);
+    border-color: var(--ink);
+  }
+  .btn.ghost{
+    background: transparent; color: var(--terracotta-deep);
+    border-color: transparent;
+  }
+
+  /* pills */
+  .pill{
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid var(--ink);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.08em;
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .pill.active{ background: var(--ink); color: var(--paper-light); }
+  .pill.soft{ background: var(--paper-deep); border-color: var(--line); }
+
+  /* input */
+  .input{
+    width: 100%;
+    font-family:'Fraunces', serif;
+    font-size: 15px; color: var(--ink);
+    padding: 12px 14px;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-sm);
+  }
+  .input::placeholder{ color: var(--ink-soft); font-style: italic; }
+
+  /* service badge */
+  .service-badge{
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--paper-light);
+    background: var(--moss-deep);
+    padding: 6px 12px; border-radius: var(--r-xs);
+  }
+  .service-badge.free{ background: var(--terracotta-deep); }
+  .service-badge .dot{
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--paper-light);
+  }
+
+  /* card sample */
+  .sample-card{
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    padding: var(--s5);
+    box-shadow: 4px 4px 0 var(--ink);
+    border-radius: var(--r-md);
+    width: 100%;
+  }
+  .sample-card h4{
+    font-family:'Fraunces', serif;
+    font-size: 22px; font-weight: 500; letter-spacing: -0.02em;
+    margin-bottom: var(--s2);
+  }
+  .sample-card h4 em{ font-style: italic; color: var(--terracotta-deep); }
+  .sample-card p{
+    font-family:'Fraunces', serif;
+    font-size: 14px; color: var(--ink); opacity: 0.8;
+    line-height: 1.6;
+  }
+
+  /* ========================================================= */
+  /*                       TOKENS                              */
+  /* ========================================================= */
+  .token-card{
+    background: var(--ink);
+    color: var(--paper-light);
+    border-radius: var(--r-lg);
+    padding: var(--s7);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12.5px; line-height: 1.7;
+    overflow-x: auto;
+    border: 1px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--terracotta);
+  }
+  .token-card pre{ white-space: pre; }
+  .token-card .key{ color: var(--terracotta-light); }
+  .token-card .str{ color: var(--ochre-light); }
+  .token-card .num{ color: var(--paper-light); }
+  .token-card .brc{ color: var(--ink-faint); }
+
+  /* ========================================================= */
+  /*                       FOOTER                              */
+  /* ========================================================= */
+  footer.page-foot{
+    margin-top: var(--s10);
+    padding-top: var(--s6);
+    border-top: 2px double var(--ink);
+    display: flex; justify-content: space-between; align-items: center;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+  footer.page-foot .ornament{
+    font-family:'Fraunces', serif; font-size: 22px;
+    color: var(--terracotta); font-style: italic;
+  }
+
+  @media (max-width: 960px){
+    .page{ padding: var(--s6) var(--s4); }
+    .cover-title{ font-size: 56px; }
+    .cover-grid{ grid-template-columns: 1fr; gap: var(--s5); }
+    .cover-foot, .wordmark-specs, .dod, .status-grid, .swatch-grid,
+    .grad-row, .radius-grid{ grid-template-columns: 1fr 1fr; }
+    .logo-grid, .comp-grid, .font-showcase, .space-demo{ grid-template-columns: 1fr; }
+    .palette-core{ grid-template-columns: 1fr 1fr; }
+    h1.section-title{ font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     REUSABLE MARK (placeholder monogram "d·i")
+============================================================ -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="mark" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2"/>
+      <text x="60" y="80"
+            text-anchor="middle"
+            font-family="Fraunces, serif"
+            font-size="62"
+            font-style="italic"
+            font-weight="500"
+            fill="currentColor"
+            style="font-variation-settings: 'opsz' 144;">
+        d<tspan fill="#c2532a">·</tspan>i
+      </text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="page">
+
+  <!-- ==========================================================
+       COVER
+  =========================================================== -->
+  <div class="cover">
+
+    <header class="cover-masthead">
+      <div>№ 01 · Brand Kit</div>
+      <div class="center">— identity system —</div>
+      <div>v 0.1 · 2026</div>
+    </header>
+
+    <div class="cover-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom: var(--s6);">
+          <span class="dot"></span>
+          <span class="meta on-accent">Coaching · IT · EN · NL</span>
+          <span class="rule"></span>
+          <span class="num">/brand-kit</span>
+        </div>
+
+        <h1 class="cover-title">
+          Dutch with<br>
+          an <span class="ital">Italian Touch</span>
+        </h1>
+
+        <p class="cover-tag">
+          Un sistema di identità editoriale caldo, pensato
+          per accompagnare le mamme nel rientro al lavoro —
+          in tre lingue, senza frizione.
+        </p>
+      </div>
+
+      <div class="cover-mark" style="color: var(--ink);">
+        <svg><use href="#mark"/></svg>
+      </div>
+    </div>
+
+    <div class="cover-foot">
+      <div class="cell">
+        <div class="k">Audience</div>
+        <div class="v">Mamme in rientro al lavoro</div>
+      </div>
+      <div class="cell">
+        <div class="k">Channels</div>
+        <div class="v">Web · Google Meet</div>
+      </div>
+      <div class="cell">
+        <div class="k">Languages</div>
+        <div class="v">Italiano · English · Nederlands</div>
+      </div>
+      <div class="cell">
+        <div class="k">Type</div>
+        <div class="v">Fraunces · JetBrains Mono</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==========================================================
+       01 · LOGOMARK
+  =========================================================== -->
+  <section>
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta on-accent">01 · Logomark</span>
+      <span class="rule"></span>
+      <span class="num">/logo</span>
+    </div>
+    <h1 class="section-title">Un monogramma che <em>respira</em>.</h1>
+    <p class="section-sub">
+      Un cerchio e due lettere — "d·i" — tracciati in Fraunces italic.
+      Il punto centrale in terracotta è il segno: la pausa tra due culture.
+      Placeholder tipografico, sostituibile da un mark custom quando pronto.
+    </p>
+
+    <div class="logo-grid">
+      <!-- primary on light -->
+      <div class="card logo-hero">
+        <div class="meta">Primary · on paper</div>
+        <div class="mark-xl" style="color: var(--ink);">
+          <svg><use href="#mark"/></svg>
+        </div>
+        <div class="meta">d·i · monogramma primario</div>
+      </div>
+
+      <!-- clearspace -->
+      <div class="card logo-hero" style="padding:0;">
+        <div class="clearspace">
+          <div class="meta">Clearspace</div>
+          <div class="clearspace-canvas">
+            <div class="grid-lines"></div>
+            <div class="mark-wrap" style="color: var(--ink);">
+              <svg><use href="#mark"/></svg>
+            </div>
+          </div>
+          <div class="labels">
+            <span class="val">x = altezza capitale</span>
+            <span class="val">margine ≥ x</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- sizes -->
+      <div class="card logo-hero" style="padding:0;">
+        <div class="logo-sizes">
+          <div class="meta" style="margin-bottom: var(--s4);">Size ladder</div>
+
+          <div class="size-row">
+            <div class="glyph" style="color: var(--ink);">
+              <svg width="88" height="88"><use href="#mark"/></svg>
+            </div>
+            <div class="info">
+              <div class="size">88 px</div>
+              <div class="use">Hero · homepage</div>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="glyph" style="color: var(--ink);">
+              <svg width="48" height="48"><use href="#mark"/></svg>
+            </div>
+            <div class="info">
+              <div class="size">48 px</div>
+              <div class="use">Header · navbar</div>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="glyph" style="color: var(--ink);">
+              <svg width="32" height="32"><use href="#mark"/></svg>
+            </div>
+            <div class="info">
+              <div class="size">32 px</div>
+              <div class="use">Footer · email signature</div>
+            </div>
+          </div>
+          <div class="size-row">
+            <div class="glyph" style="color: var(--ink);">
+              <svg width="20" height="20"><use href="#mark"/></svg>
+            </div>
+            <div class="info">
+              <div class="size">20 px · min</div>
+              <div class="use">Favicon · social avatar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- dark variant -->
+    <div class="logo-grid" style="margin-top: var(--s5);">
+      <div class="card logo-hero on-dark">
+        <div class="meta">Reverse · on ink</div>
+        <div class="mark-xl" style="color: var(--paper-light);">
+          <svg><use href="#mark"/></svg>
+        </div>
+        <div class="meta">Per sfondi scuri</div>
+      </div>
+
+      <!-- wordmark -->
+      <div class="card wordmark-demo" style="grid-column: span 2;">
+        <div>
+          <div class="meta" style="margin-bottom: var(--s4);">Wordmark</div>
+          <div class="name">
+            dutch with an<br><em>italian touch</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- wordmark specs -->
+    <div class="wordmark-specs">
+      <div class="spec-cell">
+        <div class="k">Typeface</div>
+        <div class="v">Fraunces</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">Weight</div>
+        <div class="v">400 / 500 ital</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">Optical size</div>
+        <div class="v">144 pt</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">Tracking</div>
+        <div class="v">−0.03 em</div>
+      </div>
+    </div>
+
+    <!-- dos/donts -->
+    <div class="eyebrow" style="margin-top: var(--s9);">
+      <span class="dot"></span>
+      <span class="meta">Do · Don't</span>
+      <span class="rule"></span>
+      <span class="num">/usage</span>
+    </div>
+
+    <div class="dod">
+      <div class="dod-cell" style="background: var(--paper-light);">
+        <span class="tag ok">Do</span>
+        <div class="inner" style="color: var(--ink);">
+          <svg><use href="#mark"/></svg>
+        </div>
+        <div class="note">Mark in ink su paper chiaro.</div>
+      </div>
+      <div class="dod-cell" style="background: var(--ink);">
+        <span class="tag ok">Do</span>
+        <div class="inner" style="color: var(--paper-light);">
+          <svg><use href="#mark"/></svg>
+        </div>
+        <div class="note" style="color: var(--ink-faint);">Mark chiaro su ink.</div>
+      </div>
+      <div class="dod-cell" style="background: var(--terracotta);">
+        <span class="tag no">Don't</span>
+        <div class="inner" style="color: var(--ochre);">
+          <svg><use href="#mark"/></svg>
+        </div>
+        <div class="note" style="color: var(--paper-light);">Niente mark colorato su colore.</div>
+      </div>
+      <div class="dod-cell" style="background: var(--paper);">
+        <span class="tag no">Don't</span>
+        <div class="inner" style="color: var(--ink); transform: rotate(18deg) scale(0.9);">
+          <svg><use href="#mark"/></svg>
+        </div>
+        <div class="note">Niente rotazioni, niente scale deformate.</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==========================================================
+       02 · COLOR
+  =========================================================== -->
+  <section>
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta on-accent">02 · Color</span>
+      <span class="rule"></span>
+      <span class="num">/colors</span>
+    </div>
+    <h1 class="section-title">Paper, terracotta, <em>muschio</em>.</h1>
+    <p class="section-sub">
+      Una carta calda come base. Terracotta per il calore e l'azione.
+      Muschio per la crescita, la calma, il successo. Ocra per l'enfasi
+      e i momenti di attesa. Nient'altro.
+    </p>
+
+    <!-- core palette -->
+    <div class="palette-core">
+      <div class="c" style="background: var(--paper); color: var(--ink);">
+        <div>
+          <div class="lbl">Base · 01</div>
+          <div class="nm">Paper</div>
+        </div>
+        <div class="hex">#F2EBDC</div>
+      </div>
+      <div class="c" style="background: var(--ink); color: var(--paper-light);">
+        <div>
+          <div class="lbl">Ink · 02</div>
+          <div class="nm">Ink</div>
+        </div>
+        <div class="hex">#1F1A14</div>
+      </div>
+      <div class="c" style="background: var(--terracotta); color: #fff;">
+        <div>
+          <div class="lbl">Brand · 03</div>
+          <div class="nm">Terracotta</div>
+        </div>
+        <div class="hex">#C2532A</div>
+      </div>
+      <div class="c" style="background: var(--moss); color: #fff;">
+        <div>
+          <div class="lbl">Brand · 04</div>
+          <div class="nm">Moss</div>
+        </div>
+        <div class="hex">#4A5D2A</div>
+      </div>
+    </div>
+
+    <!-- extended swatches -->
+    <div class="eyebrow" style="margin-top: var(--s8);">
+      <span class="dot"></span>
+      <span class="meta">Extended</span>
+      <span class="rule"></span>
+      <span class="num">/variants</span>
+    </div>
+
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="chip" style="background:#f8f3e6;">
+          <span class="corner">AA</span>
+        </div>
+        <div class="body">
+          <div class="nm">Paper light</div>
+          <div class="rl">surface · elevated</div>
+          <div class="hex">#F8F3E6</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#e8dfc9;">
+          <span class="corner">AA</span>
+        </div>
+        <div class="body">
+          <div class="nm">Paper deep</div>
+          <div class="rl">surface · recessed</div>
+          <div class="hex">#E8DFC9</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#8a7a64;">
+          <span class="corner">AA</span>
+        </div>
+        <div class="body">
+          <div class="nm">Ink soft</div>
+          <div class="rl">text · muted</div>
+          <div class="hex">#8A7A64</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#b9ad93;">
+          <span class="corner">AA</span>
+        </div>
+        <div class="body">
+          <div class="nm">Ink faint</div>
+          <div class="rl">text · disabled</div>
+          <div class="hex">#B9AD93</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="chip" style="background:#e07d4f;">
+          <span class="corner">AA</span>
+        </div>
+        <div class="body">
+          <div class="nm">Terracotta light</div>
+          <div class="rl">accent · soft</div>
+          <div class="hex">#E07D4F</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#8f3a1c;">
+          <span class="corner">AAA</span>
+        </div>
+        <div class="body">
+          <div class="nm">Terracotta deep</div>
+          <div class="rl">accent · strong</div>
+          <div class="hex">#8F3A1C</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#2f3d18;">
+          <span class="corner">AAA</span>
+        </div>
+        <div class="body">
+          <div class="nm">Moss deep</div>
+          <div class="rl">success · strong</div>
+          <div class="hex">#2F3D18</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#c89234;">
+          <span class="corner">AA</span>
+        </div>
+        <div class="body">
+          <div class="nm">Ochre</div>
+          <div class="rl">emphasis · warm</div>
+          <div class="hex">#C89234</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- gradients -->
+    <div class="eyebrow" style="margin-top: var(--s8);">
+      <span class="dot"></span>
+      <span class="meta">Gradients</span>
+      <span class="rule"></span>
+      <span class="num">/gradients</span>
+    </div>
+
+    <div class="grad-row">
+      <div class="grad" style="background: var(--grad-paper); color: var(--ink);">
+        <div class="nm">Paper glow</div>
+        <div class="v">paper-light → paper-deep</div>
+      </div>
+      <div class="grad" style="background: var(--grad-terra); color: #fff;">
+        <div class="nm">Terra heat</div>
+        <div class="v">terracotta-light → terracotta-deep</div>
+      </div>
+      <div class="grad" style="background: var(--grad-moss); color: #fff;">
+        <div class="nm">Moss calm</div>
+        <div class="v">moss-light → moss-deep</div>
+      </div>
+      <div class="grad" style="background: var(--grad-ochre); color: var(--ink);">
+        <div class="nm">Ochre warm</div>
+        <div class="v">ochre-light → ochre-deep</div>
+      </div>
+      <div class="grad" style="background: var(--grad-dusk); color: #fff; grid-column: span 2;">
+        <div class="nm">Dusk · signature</div>
+        <div class="v">terracotta → ochre → moss · solo per hero speciali</div>
+      </div>
+    </div>
+
+    <!-- status -->
+    <div class="eyebrow" style="margin-top: var(--s8);">
+      <span class="dot"></span>
+      <span class="meta">Status tokens</span>
+      <span class="rule"></span>
+      <span class="num">/status</span>
+    </div>
+
+    <div class="status-grid">
+      <div class="status-card">
+        <div class="head">
+          <span class="dot" style="background: var(--status-good);"></span>
+          <span class="label" style="color: var(--status-good);">Good</span>
+        </div>
+        <div class="nm">Conferma · booking riuscito</div>
+        <div class="hex">#4A5D2A · moss</div>
+      </div>
+      <div class="status-card">
+        <div class="head">
+          <span class="dot" style="background: var(--status-warn);"></span>
+          <span class="label" style="color: var(--ochre-deep);">Warn</span>
+        </div>
+        <div class="nm">Attenzione · slot limitato</div>
+        <div class="hex">#C89234 · ochre</div>
+      </div>
+      <div class="status-card">
+        <div class="head">
+          <span class="dot" style="background: var(--status-bad);"></span>
+          <span class="label" style="color: var(--status-bad);">Bad</span>
+        </div>
+        <div class="nm">Errore · pagamento fallito</div>
+        <div class="hex">#8F3A1C · terra-deep</div>
+      </div>
+      <div class="status-card">
+        <div class="head">
+          <span class="dot" style="background: var(--status-info);"></span>
+          <span class="label" style="color: var(--status-info);">Info</span>
+        </div>
+        <div class="nm">Informazione · neutrale</div>
+        <div class="hex">#8A7A64 · ink-soft</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==========================================================
+       03 · TYPOGRAPHY
+  =========================================================== -->
+  <section>
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta on-accent">03 · Typography</span>
+      <span class="rule"></span>
+      <span class="num">/typography</span>
+    </div>
+    <h1 class="section-title">Due voci, <em>una lingua</em>.</h1>
+    <p class="section-sub">
+      Fraunces per ogni cosa leggibile: titoli, corpo, citazioni.
+      JetBrains Mono per ogni cosa tecnica: label, meta, numeri, codice.
+      Niente altro. Scala ancorata a valori pixel precisi.
+    </p>
+
+    <div class="font-showcase">
+      <div class="font-card">
+        <div class="meta">Primary · display & body</div>
+        <div class="big">Aa</div>
+        <div class="axes">
+          <div class="axis">
+            <div class="k">Family</div>
+            <div class="v">Fraunces</div>
+          </div>
+          <div class="axis">
+            <div class="k">Weights</div>
+            <div class="v">300 · 400 · 500 · 600</div>
+          </div>
+          <div class="axis">
+            <div class="k">Axes</div>
+            <div class="v">opsz · ital</div>
+          </div>
+        </div>
+      </div>
+      <div class="font-card mono dark">
+        <div class="meta">Secondary · meta & tech</div>
+        <div class="big">01</div>
+        <div class="axes">
+          <div class="axis">
+            <div class="k">Family</div>
+            <div class="v">JetBrains Mono</div>
+          </div>
+          <div class="axis">
+            <div class="k">Weights</div>
+            <div class="v">400 · 500 · 600</div>
+          </div>
+          <div class="axis">
+            <div class="k">Usage</div>
+            <div class="v">Label · meta · hex · code</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- type scale -->
+    <div class="eyebrow" style="margin-top: var(--s8);">
+      <span class="dot"></span>
+      <span class="meta">Scale</span>
+      <span class="rule"></span>
+      <span class="num">/scale</span>
+    </div>
+
+    <div class="type-table">
+      <div class="type-row header">
+        <div>Token</div>
+        <div>Size · LH</div>
+        <div>Sample</div>
+        <div>Use</div>
+      </div>
+
+      <div class="type-row">
+        <div class="lbl">display</div>
+        <div class="size">96 · 100</div>
+        <div class="sample" style="font-size:56px; font-weight:400; letter-spacing:-0.04em; font-variation-settings:'opsz' 144;">Torna al lavoro.</div>
+        <div class="use">Hero cover</div>
+      </div>
+      <div class="type-row">
+        <div class="lbl">h1</div>
+        <div class="size">56 · 60</div>
+        <div class="sample" style="font-size:40px; font-weight:400; letter-spacing:-0.03em; font-variation-settings:'opsz' 96;">Sezione principale</div>
+        <div class="use">Page title</div>
+      </div>
+      <div class="type-row">
+        <div class="lbl">h2</div>
+        <div class="size">40 · 48</div>
+        <div class="sample" style="font-size:30px; font-weight:500; letter-spacing:-0.02em;">Sottotitolo</div>
+        <div class="use">Section header</div>
+      </div>
+      <div class="type-row">
+        <div class="lbl">h3</div>
+        <div class="size">24 · 32</div>
+        <div class="sample" style="font-size:22px; font-weight:600; letter-spacing:-0.02em;">Titolo di card</div>
+        <div class="use">Card · block</div>
+      </div>
+      <div class="type-row">
+        <div class="lbl">body-lg</div>
+        <div class="size">18 · 28</div>
+        <div class="sample" style="font-size:17px; font-weight:400; font-style:italic;">Paragrafo lead, tono caldo e invitante.</div>
+        <div class="use">Lead paragraph</div>
+      </div>
+      <div class="type-row">
+        <div class="lbl">body</div>
+        <div class="size">15 · 24</div>
+        <div class="sample" style="font-size:15px; font-weight:400;">Testo di lettura, lunga forma. Il respiro editoriale.</div>
+        <div class="use">Body copy</div>
+      </div>
+      <div class="type-row">
+        <div class="lbl">small</div>
+        <div class="size">13 · 20</div>
+        <div class="sample" style="font-size:13px; font-weight:400; color:var(--ink-soft);">Note, caption, supporto.</div>
+        <div class="use">Caption</div>
+      </div>
+      <div class="type-row last">
+        <div class="lbl">meta</div>
+        <div class="size">11 · 14</div>
+        <div class="sample" style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--terracotta);">01 · Section / label</div>
+        <div class="use">Eyebrow · tag · label</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==========================================================
+       04 · SPACING & RADIUS
+  =========================================================== -->
+  <section>
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta on-accent">04 · Spacing & Radius</span>
+      <span class="rule"></span>
+      <span class="num">/sizing</span>
+    </div>
+    <h1 class="section-title">Griglia a <em>4 pixel</em>.</h1>
+    <p class="section-sub">
+      Ogni misura è un multiplo di 4. I raggi seguono una scala di
+      sei passi — sharp per i contenitori, soft per i pills.
+    </p>
+
+    <div class="space-demo">
+      <!-- spacing ladder -->
+      <div class="space-ladder">
+        <div class="meta" style="margin-bottom: var(--s4);">Spacing scale</div>
+        <div class="space-row"><div class="tk">s1</div><div class="bar" style="width:4px;"></div><div class="val">4 px</div></div>
+        <div class="space-row"><div class="tk">s2</div><div class="bar" style="width:8px;"></div><div class="val">8 px</div></div>
+        <div class="space-row"><div class="tk">s3</div><div class="bar" style="width:12px;"></div><div class="val">12 px</div></div>
+        <div class="space-row"><div class="tk">s4</div><div class="bar" style="width:16px;"></div><div class="val">16 px</div></div>
+        <div class="space-row"><div class="tk">s5</div><div class="bar" style="width:24px;"></div><div class="val">24 px</div></div>
+        <div class="space-row"><div class="tk">s6</div><div class="bar" style="width:32px;"></div><div class="val">32 px</div></div>
+        <div class="space-row"><div class="tk">s7</div><div class="bar" style="width:48px;"></div><div class="val">48 px</div></div>
+        <div class="space-row"><div class="tk">s8</div><div class="bar" style="width:64px;"></div><div class="val">64 px</div></div>
+        <div class="space-row"><div class="tk">s9</div><div class="bar" style="width:96px;"></div><div class="val">96 px</div></div>
+        <div class="space-row"><div class="tk">s10</div><div class="bar" style="width:128px;"></div><div class="val">128 px</div></div>
+      </div>
+
+      <!-- radius -->
+      <div class="space-ladder">
+        <div class="meta" style="margin-bottom: var(--s4);">Radius scale</div>
+        <div class="radius-grid">
+          <div class="radius-cell" style="border-radius: 2px;">
+            <div class="tk">r-xs</div>
+            <div class="val">2</div>
+          </div>
+          <div class="radius-cell" style="border-radius: 4px;">
+            <div class="tk">r-sm</div>
+            <div class="val">4</div>
+          </div>
+          <div class="radius-cell" style="border-radius: 8px;">
+            <div class="tk">r-md</div>
+            <div class="val">8</div>
+          </div>
+          <div class="radius-cell" style="border-radius: 12px;">
+            <div class="tk">r-lg</div>
+            <div class="val">12</div>
+          </div>
+          <div class="radius-cell" style="border-radius: 16px;">
+            <div class="tk">r-xl</div>
+            <div class="val">16</div>
+          </div>
+          <div class="radius-cell" style="border-radius: 24px;">
+            <div class="tk">r-2xl</div>
+            <div class="val">24</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==========================================================
+       05 · COMPONENTS
+  =========================================================== -->
+  <section>
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta on-accent">05 · Components</span>
+      <span class="rule"></span>
+      <span class="num">/components</span>
+    </div>
+    <h1 class="section-title">Primitive <em>essenziali</em>.</h1>
+    <p class="section-sub">
+      Bottoni, pill, input, badge, card. Il minimo per costruire
+      landing, flusso di prenotazione, conferma — senza dipendere
+      da librerie UI esterne.
+    </p>
+
+    <div class="comp-grid">
+
+      <!-- buttons -->
+      <div class="comp-card">
+        <div class="title">Buttons</div>
+        <div class="comp-stack">
+          <button class="btn primary">Prenota la sessione →</button>
+          <button class="btn ink">Scopri di più</button>
+          <button class="btn outline">Scarica la guida</button>
+          <button class="btn ghost">Leggi tutto ↓</button>
+        </div>
+      </div>
+
+      <!-- pills / languages -->
+      <div class="comp-card">
+        <div class="title">Pills & language</div>
+        <div class="comp-stack">
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="pill active">🇮🇹 Italiano</span>
+            <span class="pill">🇬🇧 English</span>
+            <span class="pill">🇳🇱 Nederlands</span>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="pill soft">Coaching 1:1</span>
+            <span class="pill soft">60 min</span>
+            <span class="pill soft">Google Meet</span>
+          </div>
+          <div>
+            <span class="service-badge free"><span class="dot"></span>Cal.com · free tier</span>
+          </div>
+          <div>
+            <span class="service-badge"><span class="dot"></span>Google Meet · connected</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- input -->
+      <div class="comp-card">
+        <div class="title">Input fields</div>
+        <div class="comp-stack" style="width:100%;">
+          <input class="input" placeholder="il.tuo@indirizzo.email" />
+          <input class="input" value="Maria Rossi" />
+          <input class="input" placeholder="Cosa ti aspetti dalla sessione?" />
+        </div>
+      </div>
+
+      <!-- card -->
+      <div class="comp-card">
+        <div class="title">Card</div>
+        <div class="comp-stack" style="width:100%;">
+          <div class="sample-card">
+            <div class="meta" style="margin-bottom: var(--s3);">01 · Sessione discovery</div>
+            <h4>Un'ora per <em>ascoltarti</em></h4>
+            <p>Prima chiamata conoscitiva, senza impegno. Capiamo insieme
+            se il coaching è il tuo prossimo passo.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ==========================================================
+       06 · TOKENS
+  =========================================================== -->
+  <section>
+    <div class="eyebrow">
+      <span class="dot"></span>
+      <span class="meta on-accent">06 · Tokens</span>
+      <span class="rule"></span>
+      <span class="num">/brand.json</span>
+    </div>
+    <h1 class="section-title">Source of <em>truth</em>.</h1>
+    <p class="section-sub">
+      Tutto il brand kit è generabile da un JSON unico. Chiavi
+      top-level: <code style="font-family:'JetBrains Mono',monospace; color:var(--terracotta-deep); font-weight:600;">name, colors, typography, space, radius, gradients, status, logo</code>.
+      Da esportare verso Tailwind, CSS vars, o design tools.
+    </p>
+
+    <div class="token-card">
+<pre>{
+  <span class="key">"name"</span>: <span class="str">"Dutch with an Italian Touch"</span>,
+  <span class="key">"tagline"</span>: <span class="str">"Coaching for working mothers"</span>,
+  <span class="key">"languages"</span>: [<span class="str">"it"</span>, <span class="str">"en"</span>, <span class="str">"nl"</span>],
+
+  <span class="key">"colors"</span>: <span class="brc">{</span>
+    <span class="key">"paper"</span>:           <span class="str">"#F2EBDC"</span>,
+    <span class="key">"paper-light"</span>:     <span class="str">"#F8F3E6"</span>,
+    <span class="key">"paper-deep"</span>:      <span class="str">"#E8DFC9"</span>,
+    <span class="key">"paper-warm"</span>:      <span class="str">"#EDE2C8"</span>,
+    <span class="key">"ink"</span>:             <span class="str">"#1F1A14"</span>,
+    <span class="key">"ink-soft"</span>:        <span class="str">"#8A7A64"</span>,
+    <span class="key">"ink-faint"</span>:       <span class="str">"#B9AD93"</span>,
+    <span class="key">"terracotta"</span>:      <span class="str">"#C2532A"</span>,
+    <span class="key">"terracotta-deep"</span>: <span class="str">"#8F3A1C"</span>,
+    <span class="key">"terracotta-light"</span>:<span class="str">"#E07D4F"</span>,
+    <span class="key">"moss"</span>:            <span class="str">"#4A5D2A"</span>,
+    <span class="key">"moss-deep"</span>:       <span class="str">"#2F3D18"</span>,
+    <span class="key">"moss-light"</span>:      <span class="str">"#7A9445"</span>,
+    <span class="key">"ochre"</span>:           <span class="str">"#C89234"</span>,
+    <span class="key">"ochre-deep"</span>:      <span class="str">"#9A6F1F"</span>,
+    <span class="key">"ochre-light"</span>:     <span class="str">"#E4B05A"</span>
+  <span class="brc">}</span>,
+
+  <span class="key">"status"</span>: <span class="brc">{</span>
+    <span class="key">"good"</span>: <span class="str">"#4A5D2A"</span>,
+    <span class="key">"warn"</span>: <span class="str">"#C89234"</span>,
+    <span class="key">"bad"</span>:  <span class="str">"#8F3A1C"</span>,
+    <span class="key">"info"</span>: <span class="str">"#8A7A64"</span>
+  <span class="brc">}</span>,
+
+  <span class="key">"gradients"</span>: <span class="brc">{</span>
+    <span class="key">"paper"</span>: <span class="str">"linear-gradient(135deg,#F8F3E6,#E8DFC9)"</span>,
+    <span class="key">"terra"</span>: <span class="str">"linear-gradient(135deg,#E07D4F,#8F3A1C)"</span>,
+    <span class="key">"moss"</span>:  <span class="str">"linear-gradient(135deg,#7A9445,#2F3D18)"</span>,
+    <span class="key">"ochre"</span>: <span class="str">"linear-gradient(135deg,#E4B05A,#9A6F1F)"</span>,
+    <span class="key">"dusk"</span>:  <span class="str">"linear-gradient(135deg,#C2532A,#C89234,#4A5D2A)"</span>
+  <span class="brc">}</span>,
+
+  <span class="key">"typography"</span>: <span class="brc">{</span>
+    <span class="key">"display"</span>: <span class="brc">{</span> <span class="key">"family"</span>: <span class="str">"Fraunces"</span>,       <span class="key">"weight"</span>: <span class="num">400</span>, <span class="key">"size"</span>: <span class="num">96</span>, <span class="key">"lineHeight"</span>: <span class="num">100</span>, <span class="key">"tracking"</span>: <span class="str">"-0.04em"</span> <span class="brc">}</span>,
+    <span class="key">"h1"</span>:      <span class="brc">{</span> <span class="key">"family"</span>: <span class="str">"Fraunces"</span>,       <span class="key">"weight"</span>: <span class="num">400</span>, <span class="key">"size"</span>: <span class="num">56</span>, <span class="key">"lineHeight"</span>: <span class="num">60</span>,  <span class="key">"tracking"</span>: <span class="str">"-0.03em"</span> <span class="brc">}</span>,
+    <span class="key">"h2"</span>:      <span class="brc">{</span> <span class="key">"family"</span>: <span class="str">"Fraunces"</span>,       <span class="key">"weight"</span>: <span class="num">500</span>, <span class="key">"size"</span>: <span class="num">40</span>, <span class="key">"lineHeight"</span>: <span class="num">48</span> <span class="brc">}</span>,
+    <span class="key">"h3"</span>:      <span class="brc">{</span> <span class="key">"family"</span>: <span class="str">"Fraunces"</span>,       <span class="key">"weight"</span>: <span class="num">600</span>, <span class="key">"size"</span>: <span class="num">24</span>, <span class="key">"lineHeight"</span>: <span class="num">32</span> <span class="brc">}</span>,
+    <span class="key">"body"</span>:    <span class="brc">{</span> <span class="key">"family"</span>: <span class="str">"Fraunces"</span>,       <span class="key">"weight"</span>: <span class="num">400</span>, <span class="key">"size"</span>: <span class="num">15</span>, <span class="key">"lineHeight"</span>: <span class="num">24</span> <span class="brc">}</span>,
+    <span class="key">"small"</span>:   <span class="brc">{</span> <span class="key">"family"</span>: <span class="str">"Fraunces"</span>,       <span class="key">"weight"</span>: <span class="num">400</span>, <span class="key">"size"</span>: <span class="num">13</span>, <span class="key">"lineHeight"</span>: <span class="num">20</span> <span class="brc">}</span>,
+    <span class="key">"meta"</span>:    <span class="brc">{</span> <span class="key">"family"</span>: <span class="str">"JetBrains Mono"</span>, <span class="key">"weight"</span>: <span class="num">600</span>, <span class="key">"size"</span>: <span class="num">11</span>, <span class="key">"tracking"</span>: <span class="str">"0.15em"</span>, <span class="key">"transform"</span>: <span class="str">"uppercase"</span> <span class="brc">}</span>
+  <span class="brc">}</span>,
+
+  <span class="key">"space"</span>: <span class="brc">{</span> <span class="key">"s1"</span>: <span class="num">4</span>, <span class="key">"s2"</span>: <span class="num">8</span>, <span class="key">"s3"</span>: <span class="num">12</span>, <span class="key">"s4"</span>: <span class="num">16</span>, <span class="key">"s5"</span>: <span class="num">24</span>, <span class="key">"s6"</span>: <span class="num">32</span>, <span class="key">"s7"</span>: <span class="num">48</span>, <span class="key">"s8"</span>: <span class="num">64</span>, <span class="key">"s9"</span>: <span class="num">96</span>, <span class="key">"s10"</span>: <span class="num">128</span> <span class="brc">}</span>,
+
+  <span class="key">"radius"</span>: <span class="brc">{</span> <span class="key">"xs"</span>: <span class="num">2</span>, <span class="key">"sm"</span>: <span class="num">4</span>, <span class="key">"md"</span>: <span class="num">8</span>, <span class="key">"lg"</span>: <span class="num">12</span>, <span class="key">"xl"</span>: <span class="num">16</span>, <span class="key">"2xl"</span>: <span class="num">24</span> <span class="brc">}</span>,
+
+  <span class="key">"logo"</span>: <span class="brc">{</span>
+    <span class="key">"type"</span>: <span class="str">"placeholder-monogram"</span>,
+    <span class="key">"glyphs"</span>: <span class="str">"d·i"</span>,
+    <span class="key">"typeface"</span>: <span class="str">"Fraunces italic 500"</span>,
+    <span class="key">"minSize"</span>: <span class="num">20</span>,
+    <span class="key">"clearspace"</span>: <span class="str">"x = cap height"</span>
+  <span class="brc">}</span>
+}</pre>
+    </div>
+
+  </section>
+
+  <!-- ==========================================================
+       FOOTER
+  =========================================================== -->
+  <footer class="page-foot">
+    <span>Dutch with an Italian Touch · Brand Kit v0.1</span>
+    <span class="ornament">✦</span>
+    <span>Coaching · Mamme · Lavoro</span>
+  </footer>
+
+</div>
+</body>
+</html>
