@@ -1,0 +1,144 @@
+{
+  "nav": {
+    "services": "How it works",
+    "forWho": "Who it's for",
+    "benefits": "Benefits",
+    "faq": "FAQ",
+    "book": "Book"
+  },
+  "hero": {
+    "eyebrow": "Coaching · 1:1 · online",
+    "titleStart": "Back to work",
+    "titleEm": "without losing",
+    "titleEnd": "yourself.",
+    "sub": "A coaching path for mothers returning to work. Find clarity, confidence and a rhythm that's truly yours — in Italian, English or Dutch.",
+    "ctaPrimary": "Book a session",
+    "ctaSecondary": "See how it works",
+    "metaDuration": "60 min",
+    "metaFormat": "Google Meet",
+    "metaLangs": "IT · EN · NL"
+  },
+  "forWho": {
+    "eyebrow": "01 · Who it's for",
+    "title": "Three mothers, one shared pattern.",
+    "sub": "You don't need to have it all figured out. You just need to be willing to start looking.",
+    "items": [
+      {
+        "tag": "Return",
+        "title": "I'm coming back from maternity leave",
+        "body": "The first months are a wave. Putting identity, schedule and ambition back together — without the guilt."
+      },
+      {
+        "tag": "Pivot",
+        "title": "I want to change direction",
+        "body": "Motherhood rewrote your priorities. The old job doesn't fit — what's needed now is a clear pivot, not a leap in the dark."
+      },
+      {
+        "tag": "Balance",
+        "title": "I need a sustainable rhythm",
+        "body": "Not the magazine version of work-life balance. A real way to be a mother and a professional that doesn't drain you every Friday night."
+      }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "02 · Benefits",
+    "title": "What you walk away with.",
+    "sub": "One session won't change your life. But it changes the angle you look at it from — and often, that's enough.",
+    "items": [
+      {
+        "title": "Clarity",
+        "body": "Understanding what you actually want — not what you should want."
+      },
+      {
+        "title": "Strategy",
+        "body": "A concrete plan for the next 30 days, not a list of resolutions."
+      },
+      {
+        "title": "Support",
+        "body": "You're not alone. A coach who listens — no judgement, no rush."
+      },
+      {
+        "title": "Multilingual",
+        "body": "Italiano, English, Nederlands. The language you think in, not the one you have to translate from."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "03 · How it works",
+    "title": "Three steps, zero friction.",
+    "sub": "From click to calendar. No long forms, no waiting.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Pick a slot",
+        "body": "Live calendar in Italian, English and Dutch. Pay in one seamless flow — card, Apple Pay, Google Pay, SEPA."
+      },
+      {
+        "num": "02",
+        "title": "Get confirmation",
+        "body": "Branded email, Google Calendar invite, Google Meet link, reminders at 24h and 1h. All automatic."
+      },
+      {
+        "num": "03",
+        "title": "We meet",
+        "body": "60 minutes from your browser. No app to install, works on your phone. You leave with a plan."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "From those who started",
+    "items": [
+      {
+        "quote": "After my second maternity leave I didn't know where to begin. In an hour I had a map again.",
+        "author": "Giulia",
+        "context": "product manager, Milan"
+      },
+      {
+        "quote": "I thought it was my problem. It was a priority problem. Changes everything.",
+        "author": "Sanne",
+        "context": "HR consultant, Amsterdam"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "04 · Frequently asked",
+    "title": "What you might want to know first.",
+    "items": [
+      {
+        "q": "How long is a session?",
+        "a": "60 minutes. Long enough to go deep, short enough to leave with concrete actions."
+      },
+      {
+        "q": "How do payments work?",
+        "a": "Directly at booking, via Stripe. One-off or 3 instalments — card, Apple Pay, Google Pay or SEPA."
+      },
+      {
+        "q": "Can I cancel?",
+        "a": "Yes, up to 24 hours before, at no cost. You'll find the link in your confirmation email."
+      },
+      {
+        "q": "What language?",
+        "a": "Italian, English or Dutch. You pick the one you feel freest in."
+      },
+      {
+        "q": "Is it a program or a single session?",
+        "a": "You can start with a discovery session. If it feels right to continue, we design a path together."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Book",
+    "title": "One hour for you — and for who you want to become.",
+    "sub": "The first step costs less than dinner out. The rest is up to you."
+  },
+  "footer": {
+    "tagline": "Coaching for mothers returning to work.",
+    "languages": "Languages",
+    "links": "Links",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}

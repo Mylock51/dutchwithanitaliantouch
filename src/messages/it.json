@@ -1,0 +1,144 @@
+{
+  "nav": {
+    "services": "Come funziona",
+    "forWho": "Per chi",
+    "benefits": "Benefici",
+    "faq": "Domande",
+    "book": "Prenota"
+  },
+  "hero": {
+    "eyebrow": "Coaching · 1:1 · online",
+    "titleStart": "Torna al lavoro",
+    "titleEm": "senza perdere",
+    "titleEnd": "te stessa.",
+    "sub": "Un percorso di coaching dedicato alle mamme in rientro. Per ritrovare chiarezza, fiducia e un ritmo che sia davvero tuo — in italiano, inglese o olandese.",
+    "ctaPrimary": "Prenota la sessione",
+    "ctaSecondary": "Scopri come funziona",
+    "metaDuration": "60 min",
+    "metaFormat": "Google Meet",
+    "metaLangs": "IT · EN · NL"
+  },
+  "forWho": {
+    "eyebrow": "01 · Per chi",
+    "title": "Tre mamme, una cosa in comune.",
+    "sub": "Non serve che tu abbia tutto chiaro. Serve solo che tu voglia iniziare a guardare.",
+    "items": [
+      {
+        "tag": "Rientro",
+        "title": "Sto tornando dalla maternità",
+        "body": "I primi mesi sono un'onda. Rimettere insieme agenda, identità e ambizione — senza sentirsi in colpa."
+      },
+      {
+        "tag": "Cambio",
+        "title": "Voglio cambiare direzione",
+        "body": "La maternità ha riscritto le priorità. Ora il vecchio lavoro non torna più — serve un pivot lucido, non un salto al buio."
+      },
+      {
+        "tag": "Equilibrio",
+        "title": "Cerco un ritmo sostenibile",
+        "body": "Non un work-life balance da rivista. Un modo reale di essere madre e professionista che non ti svuoti ogni venerdì sera."
+      }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "02 · Benefici",
+    "title": "Cosa porti a casa.",
+    "sub": "Una sessione non cambia la vita. Ma cambia la prospettiva da cui la guardi — e questo, spesso, basta.",
+    "items": [
+      {
+        "title": "Chiarezza",
+        "body": "Capire cosa vuoi davvero — non cosa dovresti volere."
+      },
+      {
+        "title": "Strategia",
+        "body": "Un piano concreto per i prossimi 30 giorni, non una lista di buoni propositi."
+      },
+      {
+        "title": "Supporto",
+        "body": "Non sei sola. Un coach che ti ascolta senza giudicare e senza fretta."
+      },
+      {
+        "title": "Multilingua",
+        "body": "Italiano, English, Nederlands. La lingua in cui pensi, non quella in cui devi tradurti."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "03 · Come funziona",
+    "title": "Tre passi, zero frizione.",
+    "sub": "Dal click al calendario. Niente moduli lunghi, niente attese.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Scegli uno slot",
+        "body": "Calendario live in italiano, inglese e olandese. Paghi in un'unica esperienza — carta, Apple Pay, Google Pay, SEPA."
+      },
+      {
+        "num": "02",
+        "title": "Ricevi la conferma",
+        "body": "Email branded, invito su Google Calendar, link Google Meet, reminder 24h e 1h prima. Tutto automatico."
+      },
+      {
+        "num": "03",
+        "title": "Ci vediamo",
+        "body": "60 minuti dal tuo browser. Nessuna app da installare, funziona anche dal telefono. Usciamo con un piano."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Parole di chi ha iniziato",
+    "items": [
+      {
+        "quote": "Dopo la seconda maternità non sapevo più da che parte cominciare. In un'ora ho ritrovato una mappa.",
+        "author": "Giulia",
+        "context": "product manager, Milano"
+      },
+      {
+        "quote": "Pensavo fosse un problema mio. Era un problema di priorità. Cambia tutto.",
+        "author": "Sanne",
+        "context": "HR consultant, Amsterdam"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "04 · Domande frequenti",
+    "title": "Quello che vorresti sapere prima.",
+    "items": [
+      {
+        "q": "Quanto dura una sessione?",
+        "a": "60 minuti. È il tempo giusto per scavare senza perdere il filo, e per uscire con azioni concrete."
+      },
+      {
+        "q": "Come funziona il pagamento?",
+        "a": "Direttamente in fase di prenotazione, tramite Stripe. Puoi pagare in unica soluzione o in 3 rate — carta, Apple Pay, Google Pay o SEPA."
+      },
+      {
+        "q": "Posso annullare?",
+        "a": "Sì, fino a 24 ore prima senza costi. Trovi il link nella mail di conferma."
+      },
+      {
+        "q": "In che lingua si svolge?",
+        "a": "Italiano, inglese o olandese. Scegli tu quella in cui ti senti più libera."
+      },
+      {
+        "q": "È un percorso o una sessione singola?",
+        "a": "Puoi iniziare con una sessione discovery. Se senti che ha senso continuare, disegniamo insieme un percorso su misura."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Prenota",
+    "title": "Un'ora per te — e per quello che vuoi diventare.",
+    "sub": "Il primo passo costa meno di una cena. Il resto, lo decidi tu."
+  },
+  "footer": {
+    "tagline": "Coaching per mamme in rientro al lavoro.",
+    "languages": "Lingue",
+    "links": "Link",
+    "legal": "Legale",
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "contact": "Contatti",
+    "rights": "Tutti i diritti riservati."
+  }
+}

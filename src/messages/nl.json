@@ -1,0 +1,144 @@
+{
+  "nav": {
+    "services": "Hoe het werkt",
+    "forWho": "Voor wie",
+    "benefits": "Voordelen",
+    "faq": "FAQ",
+    "book": "Boek"
+  },
+  "hero": {
+    "eyebrow": "Coaching · 1:1 · online",
+    "titleStart": "Terug aan het werk",
+    "titleEm": "zonder jezelf",
+    "titleEnd": "te verliezen.",
+    "sub": "Een coachingstraject voor moeders die terugkeren naar werk. Vind helderheid, vertrouwen en een ritme dat echt van jou is — in het Italiaans, Engels of Nederlands.",
+    "ctaPrimary": "Boek een sessie",
+    "ctaSecondary": "Zie hoe het werkt",
+    "metaDuration": "60 min",
+    "metaFormat": "Google Meet",
+    "metaLangs": "IT · EN · NL"
+  },
+  "forWho": {
+    "eyebrow": "01 · Voor wie",
+    "title": "Drie moeders, één patroon.",
+    "sub": "Je hoeft niet alles duidelijk te hebben. Je hoeft alleen maar bereid te zijn om te beginnen kijken.",
+    "items": [
+      {
+        "tag": "Terugkeer",
+        "title": "Ik kom terug van zwangerschapsverlof",
+        "body": "De eerste maanden zijn een golf. Agenda, identiteit en ambitie opnieuw samenbrengen — zonder schuldgevoel."
+      },
+      {
+        "tag": "Verandering",
+        "title": "Ik wil van richting veranderen",
+        "body": "Het moederschap herschreef de prioriteiten. De oude baan past niet meer — nodig is een heldere pivot, geen sprong in het duister."
+      },
+      {
+        "tag": "Balans",
+        "title": "Ik zoek een duurzaam ritme",
+        "body": "Niet de magazine-versie van work-life balance. Een echte manier om moeder én professional te zijn die je niet elke vrijdagavond leegzuigt."
+      }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "02 · Voordelen",
+    "title": "Wat je meeneemt.",
+    "sub": "Eén sessie verandert je leven niet. Maar verandert de hoek van waaruit je kijkt — en dat is vaak genoeg.",
+    "items": [
+      {
+        "title": "Helderheid",
+        "body": "Begrijpen wat je echt wilt — niet wat je zou moeten willen."
+      },
+      {
+        "title": "Strategie",
+        "body": "Een concreet plan voor de komende 30 dagen, geen lijstje met goede voornemens."
+      },
+      {
+        "title": "Steun",
+        "body": "Je staat er niet alleen voor. Een coach die luistert — geen oordeel, geen haast."
+      },
+      {
+        "title": "Meertalig",
+        "body": "Italiano, English, Nederlands. De taal waarin je denkt, niet die waaruit je moet vertalen."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "03 · Hoe het werkt",
+    "title": "Drie stappen, nul wrijving.",
+    "sub": "Van klik tot kalender. Geen lange formulieren, geen wachten.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Kies een slot",
+        "body": "Live kalender in het Italiaans, Engels en Nederlands. Betaal in één vloeiende flow — kaart, Apple Pay, Google Pay, SEPA."
+      },
+      {
+        "num": "02",
+        "title": "Ontvang bevestiging",
+        "body": "Branded e-mail, Google Calendar-uitnodiging, Google Meet-link, reminders 24u en 1u van tevoren. Alles automatisch."
+      },
+      {
+        "num": "03",
+        "title": "We zien elkaar",
+        "body": "60 minuten vanuit je browser. Geen app te installeren, werkt ook op je telefoon. Je gaat weg met een plan."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Van wie al begon",
+    "items": [
+      {
+        "quote": "Na mijn tweede verlof wist ik niet waar te beginnen. In een uur had ik weer een kaart.",
+        "author": "Giulia",
+        "context": "product manager, Milaan"
+      },
+      {
+        "quote": "Ik dacht dat het mijn probleem was. Het was een prioriteitenprobleem. Verandert alles.",
+        "author": "Sanne",
+        "context": "HR consultant, Amsterdam"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "04 · Veelgestelde vragen",
+    "title": "Wat je misschien eerst wilt weten.",
+    "items": [
+      {
+        "q": "Hoe lang duurt een sessie?",
+        "a": "60 minuten. Lang genoeg om diep te gaan, kort genoeg om met concrete acties te vertrekken."
+      },
+      {
+        "q": "Hoe werkt de betaling?",
+        "a": "Direct bij het boeken, via Stripe. Eenmalig of in 3 termijnen — kaart, Apple Pay, Google Pay of SEPA."
+      },
+      {
+        "q": "Kan ik annuleren?",
+        "a": "Ja, tot 24 uur van tevoren, zonder kosten. De link vind je in je bevestigingsmail."
+      },
+      {
+        "q": "In welke taal?",
+        "a": "Italiaans, Engels of Nederlands. Jij kiest de taal waarin je je het vrijst voelt."
+      },
+      {
+        "q": "Is het een traject of één sessie?",
+        "a": "Je kunt starten met een discovery-sessie. Voelt het goed om door te gaan, dan ontwerpen we samen een traject op maat."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Boek",
+    "title": "Een uur voor jou — en voor wie je wilt worden.",
+    "sub": "De eerste stap kost minder dan een avondje uit eten. De rest bepaal jij."
+  },
+  "footer": {
+    "tagline": "Coaching voor moeders die terugkeren naar werk.",
+    "languages": "Talen",
+    "links": "Links",
+    "legal": "Juridisch",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "contact": "Contact",
+    "rights": "Alle rechten voorbehouden."
+  }
+}
