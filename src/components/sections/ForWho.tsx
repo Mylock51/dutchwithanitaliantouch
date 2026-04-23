@@ -31,10 +31,12 @@ export function ForWho() {
           </div>
         </Reveal>
 
-        <Reveal delay={120} className="grid md:grid-cols-3 gap-10 md:gap-12">
+        <div className="grid md:grid-cols-3 gap-10 md:gap-12">
           {items.map((item, i) => (
-            <article
+            <Reveal
+              as="article"
               key={i}
+              delay={120 + i * 120}
               className="border-t border-ink-faint/60 pt-7"
             >
               <span className="inline-block font-mono text-[10px] font-medium tracking-[0.2em] uppercase text-burgundy mb-6">
@@ -46,9 +48,9 @@ export function ForWho() {
               <p className="font-sans text-[14px] leading-[1.7] text-ink-soft max-w-[38ch]">
                 {item.body}
               </p>
-            </article>
+            </Reveal>
           ))}
-        </Reveal>
+        </div>
       </Container>
     </section>
   );

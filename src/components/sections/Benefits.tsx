@@ -25,9 +25,14 @@ export function Benefits() {
           </div>
         </Reveal>
 
-        <Reveal delay={120} className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
           {items.map((item, i) => (
-            <article key={i} className="border-t border-ink-faint/60 pt-7">
+            <Reveal
+              as="article"
+              key={i}
+              delay={120 + i * 100}
+              className="border-t border-ink-faint/60 pt-7"
+            >
               <div className="font-mono text-[10px] font-medium tracking-[0.22em] uppercase text-burgundy mb-6">
                 {String(i + 1).padStart(2, '0')}
               </div>
@@ -37,9 +42,9 @@ export function Benefits() {
               <p className="font-sans text-[14px] leading-[1.7] text-ink-soft">
                 {item.body}
               </p>
-            </article>
+            </Reveal>
           ))}
-        </Reveal>
+        </div>
       </Container>
     </section>
   );
