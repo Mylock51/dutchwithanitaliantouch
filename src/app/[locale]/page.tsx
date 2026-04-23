@@ -7,6 +7,7 @@ import { HowItWorks } from '@/components/sections/HowItWorks';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { FAQ } from '@/components/sections/FAQ';
 import { FinalCTA } from '@/components/sections/FinalCTA';
+import { ForCompaniesBand } from '@/components/sections/ForCompaniesBand';
 import { Footer } from '@/components/sections/Footer';
 
 export default async function HomePage({
@@ -28,6 +29,7 @@ export default async function HomePage({
         <Testimonials />
         <FAQ />
         <FinalCTA />
+        <ForCompaniesBand />
       </main>
       <Footer />
     </>

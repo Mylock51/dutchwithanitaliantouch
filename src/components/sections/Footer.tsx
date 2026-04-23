@@ -1,9 +1,10 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/Container';
 import { LangSwitcher } from '@/components/LangSwitcher';
 
 export function Footer() {
   const t = useTranslations('footer');
+  const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -84,7 +85,7 @@ export function Footer() {
             <div className="font-meta text-ink-soft mb-5">For companies</div>
             <ul className="space-y-2.5 font-sans text-[14px] text-ink-soft">
               <li>
-                <a href="/for-companies" className="inline-flex items-center gap-2 hover:text-burgundy transition-colors">
+                <a href={`/${locale}/for-companies`} className="inline-flex items-center gap-2 hover:text-burgundy transition-colors">
                   Her Next Chapter Live <span className="font-serif italic font-light">→</span>
                 </a>
               </li>

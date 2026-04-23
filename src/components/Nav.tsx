@@ -1,9 +1,10 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/Container';
 import { LangSwitcher } from '@/components/LangSwitcher';
 
 export function Nav() {
   const t = useTranslations('nav');
+  const locale = useLocale();
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-bone/80 border-b border-ink-faint/40">
@@ -21,6 +22,12 @@ export function Nav() {
           <a href="#for-who" className="hover:text-burgundy transition-colors">{t('forWho')}</a>
           <a href="#benefits" className="hover:text-burgundy transition-colors">{t('benefits')}</a>
           <a href="#faq" className="hover:text-burgundy transition-colors">{t('faq')}</a>
+          <a
+            href={`/${locale}/for-companies`}
+            className="font-serif italic font-light text-ink hover:text-burgundy transition-colors"
+          >
+            For companies
+          </a>
         </nav>
 
         <div className="flex items-center gap-5">
