@@ -140,5 +140,88 @@
     "terms": "Voorwaarden",
     "contact": "Contact",
     "rights": "Alle rechten voorbehouden."
+  },
+  "forCompaniesBand": {
+    "eyebrow": "Voor HR & people leaders",
+    "titleStart": "Ondersteun je een team van",
+    "titleEm": "terugkerende vrouwen?",
+    "body": "<em>Her Next Chapter Live</em> is ons programma van twee halve dagen voor moeders die terugkeren van verlof — cross-company cohorten, in persoon gefaciliteerd, met een geanonimiseerd inzichtenrapport voor de werkgever.",
+    "cta": "Lees de business case"
+  },
+  "forCompanies": {
+    "metaTitle": "DWAIT voor bedrijven — Her Next Chapter Live",
+    "metaDescription": "Een programma in twee delen voor terugkerende moeders. Cross-company cohorten, in persoon. Plus een geanonimiseerd inzichtenrapport voor de werkgever.",
+    "nav": { "eyebrow": "DWAIT voor bedrijven", "num": "/business-case" },
+    "hero": {
+      "titleLine1": "Ze is terug.",
+      "titleLine2Start": "Maar is ze echt",
+      "titleEm": "terug?",
+      "body": "Terugkeren van zwangerschapsverlof is een van de meest ontwrichtende professionele transities die een vrouw meemaakt. Bedrijven investeren in onboarding, leadership development, retention — en toch blijft de terugkeer van zwangerschapsverlof vrijwel volledig onbesproken. De kosten van het verkeerd doen zijn aanzienlijk. De kosten van het goed doen, niet."
+    },
+    "stats": {
+      "eyebrow": "De business case",
+      "title": "De kosten van negeren.",
+      "items": [
+        { "figure": "1 op 3", "label": "vrouwen overweegt haar baan te verlaten binnen het eerste jaar na terugkeer van zwangerschapsverlof" },
+        { "figure": "200%", "label": "van het jaarsalaris — de gemiddelde kosten om een mid-senior vrouwelijke medewerker te vervangen" },
+        { "figure": "87%", "label": "van de terugkerende moeders zegt zich niet gesteund te hebben gevoeld door hun bedrijf tijdens de terugkeer" }
+      ]
+    },
+    "programme": {
+      "eyebrow": "Het programma",
+      "num": "/her-next-chapter-live",
+      "titleStart": "Her Next Chapter",
+      "titleEm": "Live",
+      "body": "Een gestructureerd programma in retraite-stijl, verdeeld over twee halve dagen — ontworpen om terugkerende vrouwen te helpen opnieuw verbinding te maken met hun professionele identiteit, helder te krijgen wat ze nodig hebben om op hun best te presteren, en een duurzame community te bouwen met andere vrouwen die dezelfde transitie doormaken."
+    },
+    "days": [
+      {
+        "num": "Dag 01",
+        "title": "Wie ben ik nu?",
+        "framework": "Het Identity Shift framework",
+        "bullets": [
+          "Begeleide individuele reflectie",
+          "Gefaciliteerd groepsgesprek",
+          "In kaart brengen wat veranderd is — en wat niet"
+        ]
+      },
+      {
+        "num": "Dag 02",
+        "title": "Waar ga ik naartoe?",
+        "framework": "Het Compass framework",
+        "bullets": [
+          "Waarden & non-negotiables definiëren",
+          "Wat heb ik nu nodig van mijn bedrijf?",
+          "Persoonlijke toolkit + community setup"
+        ]
+      }
+    ],
+    "deliverable": {
+      "eyebrow": "Wat je bedrijf ontvangt",
+      "titleStart": "Een",
+      "titleEm": "geanonimiseerd inzichtenrapport",
+      "titleEnd": " — echt signaal over wat je terugkerende vrouwen nodig hebben om op hun best te presteren, rechtstreeks uit de bron."
+    },
+    "details": {
+      "eyebrow": "Programma-details",
+      "num": "/details",
+      "items": [
+        { "key": "Formaat", "value": "Twee halve dagen, in persoon" },
+        { "key": "Groepsgrootte", "value": "8–12 vrouwen maximum" },
+        { "key": "Model", "value": "Cross-company cohorten" },
+        { "key": "Investering", "value": "Op aanvraag" }
+      ]
+    },
+    "finalCta": {
+      "titleStart": "Laten we praten over je",
+      "titleEm": "terugkerende vrouwen.",
+      "cta": "Neem contact op",
+      "back": "Terug naar het 1:1 programma"
+    },
+    "crossSell": {
+      "eyebrow": "Op zoek naar diepere ondersteuning?",
+      "bodyStart": "Her Next Chapter",
+      "bodyEnd": " — ons 1:1 coachingsprogramma — is beschikbaar voor individuele vrouwen die het werk willen voortzetten na de groepservaring."
+    }
   }
 }

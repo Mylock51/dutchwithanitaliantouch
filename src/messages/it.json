@@ -140,5 +140,88 @@
     "terms": "Termini",
     "contact": "Contatti",
     "rights": "Tutti i diritti riservati."
+  },
+  "forCompaniesBand": {
+    "eyebrow": "Per HR & people leaders",
+    "titleStart": "Supporti un team di",
+    "titleEm": "donne in rientro?",
+    "body": "<em>Her Next Chapter Live</em> è il nostro programma di due mezze giornate per mamme al rientro dal congedo — cohort cross-company, in presenza, con un report anonimizzato per l'azienda.",
+    "cta": "Leggi il business case"
+  },
+  "forCompanies": {
+    "metaTitle": "DWAIT for companies — Her Next Chapter Live",
+    "metaDescription": "Un programma in due parti per mamme in rientro. Cohort cross-company, in presenza. Più un report anonimizzato per l'azienda.",
+    "nav": { "eyebrow": "DWAIT for companies", "num": "/business-case" },
+    "hero": {
+      "titleLine1": "È tornata.",
+      "titleLine2Start": "Ma è davvero",
+      "titleEm": "tornata?",
+      "body": "Il rientro dal congedo di maternità è una delle transizioni professionali più destabilizzanti. Le aziende investono in onboarding, leadership development, retention — eppure il rientro dalla maternità resta quasi del tutto ignorato. Il costo di sbagliarlo è alto. Il costo di farlo bene, no."
+    },
+    "stats": {
+      "eyebrow": "Il business case",
+      "title": "Il costo di ignorarlo.",
+      "items": [
+        { "figure": "1 su 3", "label": "donne pensa di lasciare il proprio lavoro entro il primo anno dal rientro dalla maternità" },
+        { "figure": "200%", "label": "dello stipendio annuo — il costo medio per sostituire una dipendente mid-senior" },
+        { "figure": "87%", "label": "delle mamme al rientro dichiara di non essersi sentita supportata dall'azienda durante la transizione" }
+      ]
+    },
+    "programme": {
+      "eyebrow": "Il programma",
+      "num": "/her-next-chapter-live",
+      "titleStart": "Her Next Chapter",
+      "titleEm": "Live",
+      "body": "Un programma strutturato, in stile ritiro, su due mezze giornate — pensato per aiutare le donne al rientro a riconnettersi con la propria identità professionale, chiarire cosa serve loro per esprimersi al meglio, e costruire una community duratura con altre donne che stanno vivendo la stessa transizione."
+    },
+    "days": [
+      {
+        "num": "Giorno 01",
+        "title": "Chi sono adesso?",
+        "framework": "Framework Identity Shift",
+        "bullets": [
+          "Riflessione individuale guidata",
+          "Conversazione di gruppo facilitata",
+          "Mappare ciò che è cambiato — e ciò che non lo è"
+        ]
+      },
+      {
+        "num": "Giorno 02",
+        "title": "Dove sto andando?",
+        "framework": "Framework Compass",
+        "bullets": [
+          "Definire valori & non negoziabili",
+          "Cosa mi serve ora dalla mia azienda?",
+          "Toolkit personale + setup della community"
+        ]
+      }
+    ],
+    "deliverable": {
+      "eyebrow": "Cosa riceve la tua azienda",
+      "titleStart": "Un",
+      "titleEm": "report anonimizzato",
+      "titleEnd": " — segnale reale su ciò che serve alle tue donne al rientro per dare il meglio, direttamente dalla fonte."
+    },
+    "details": {
+      "eyebrow": "Dettagli del programma",
+      "num": "/details",
+      "items": [
+        { "key": "Formato", "value": "Due mezze giornate, in presenza" },
+        { "key": "Dimensione gruppo", "value": "8–12 donne max" },
+        { "key": "Modello", "value": "Cohort cross-company" },
+        { "key": "Investimento", "value": "Su richiesta" }
+      ]
+    },
+    "finalCta": {
+      "titleStart": "Parliamo delle tue",
+      "titleEm": "donne al rientro.",
+      "cta": "Contattaci",
+      "back": "Torna al programma 1:1"
+    },
+    "crossSell": {
+      "eyebrow": "Cerchi un supporto più profondo?",
+      "bodyStart": "Her Next Chapter",
+      "bodyEnd": " — il nostro programma di coaching 1:1 — è disponibile per le donne che vogliono proseguire il lavoro dopo l'esperienza di gruppo."
+    }
   }
 }

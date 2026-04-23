@@ -140,5 +140,88 @@
     "terms": "Terms",
     "contact": "Contact",
     "rights": "All rights reserved."
+  },
+  "forCompaniesBand": {
+    "eyebrow": "For HR & people leaders",
+    "titleStart": "Supporting a team of",
+    "titleEm": "returning women?",
+    "body": "<em>Her Next Chapter Live</em> is our two half-day programme for mothers returning from leave — cross-company cohorts, facilitated in person, with an anonymised insight report for the employer.",
+    "cta": "Read the business case"
+  },
+  "forCompanies": {
+    "metaTitle": "DWAIT for companies — Her Next Chapter Live",
+    "metaDescription": "A two-part programme for returning mothers. Cross-company cohorts, in person. Plus an anonymised insight report for the employer.",
+    "nav": { "eyebrow": "DWAIT for companies", "num": "/business-case" },
+    "hero": {
+      "titleLine1": "She came back.",
+      "titleLine2Start": "But is she really",
+      "titleEm": "back?",
+      "body": "Returning from maternity leave is one of the most disorienting professional transitions a woman faces. Companies invest in onboarding, in leadership development, in retention — yet the return from maternity is left almost entirely unaddressed. The cost of getting it wrong is significant. The cost of getting it right is not."
+    },
+    "stats": {
+      "eyebrow": "The business case",
+      "title": "The cost of ignoring it.",
+      "items": [
+        { "figure": "1 in 3", "label": "women consider leaving their job within the first year of returning from maternity leave" },
+        { "figure": "200%", "label": "of annual salary — the average cost of replacing a mid-senior female employee" },
+        { "figure": "87%", "label": "of returning mothers say they felt unsupported by their company during the transition back" }
+      ]
+    },
+    "programme": {
+      "eyebrow": "The programme",
+      "num": "/her-next-chapter-live",
+      "titleStart": "Her Next Chapter",
+      "titleEm": "Live",
+      "body": "A structured, retreat-like programme across two half-days — designed to help returning women reconnect with their professional identity, gain clarity on what they need to perform at their best, and build a lasting community with other women navigating the same transition."
+    },
+    "days": [
+      {
+        "num": "Day 01",
+        "title": "Who am I now?",
+        "framework": "The Identity Shift framework",
+        "bullets": [
+          "Guided individual reflection",
+          "Facilitated group conversation",
+          "Mapping what has changed — and what hasn’t"
+        ]
+      },
+      {
+        "num": "Day 02",
+        "title": "Where am I going?",
+        "framework": "The Compass framework",
+        "bullets": [
+          "Defining values & non-negotiables",
+          "What do I need from my company now?",
+          "Personal toolkit + community setup"
+        ]
+      }
+    ],
+    "deliverable": {
+      "eyebrow": "What your company receives",
+      "titleStart": "An",
+      "titleEm": "anonymised insight report",
+      "titleEnd": " — real signal on what your returning women need to perform at their best, straight from the source."
+    },
+    "details": {
+      "eyebrow": "Programme details",
+      "num": "/details",
+      "items": [
+        { "key": "Format", "value": "Two half-days, in person" },
+        { "key": "Group size", "value": "8–12 women maximum" },
+        { "key": "Model", "value": "Cross-company cohorts" },
+        { "key": "Investment", "value": "On request" }
+      ]
+    },
+    "finalCta": {
+      "titleStart": "Let’s talk about your",
+      "titleEm": "returning women.",
+      "cta": "Get in touch",
+      "back": "Back to the 1:1 programme"
+    },
+    "crossSell": {
+      "eyebrow": "Looking for deeper support?",
+      "bodyStart": "Her Next Chapter",
+      "bodyEnd": " — our 1:1 coaching programme — is available for individual women who want to continue the work after the group experience."
+    }
   }
 }
