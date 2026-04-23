@@ -10,7 +10,7 @@ export function CalEmbed() {
   const src = `https://cal.com/${username}/${event}?embed=true&theme=light&hideEventTypeDetails=false&layout=month_view`;
 
   return (
-    <div className="relative w-full overflow-hidden rounded-xl border border-ink bg-paper-light card-shadow-lg">
+    <div className="relative w-full overflow-hidden rounded-xs border border-ink-faint/60 bg-bone-light">
       <iframe
         src={src}
         title="Book a session"
@@ -19,7 +19,7 @@ export function CalEmbed() {
         allow="payment"
         data-locale={locale}
       />
-      <div className="absolute bottom-2 right-3 font-mono text-[9px] tracking-widest uppercase text-ink-soft/70">
+      <div className="absolute bottom-2 right-3 font-mono text-[9px] tracking-[0.22em] uppercase text-ink-faint">
         powered by cal.com
       </div>
     </div>

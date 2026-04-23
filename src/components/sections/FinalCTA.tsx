@@ -8,25 +8,27 @@ export function FinalCTA() {
   const t = useTranslations('finalCta');
 
   return (
-    <section id="book" className="py-20 md:py-28 border-t border-ink/15 bg-paper-deep/40">
+    <section id="book" className="py-28 md:py-36 border-t border-ink-faint/50 bg-bone-deep/30">
       <Container>
         <Reveal>
-          <Eyebrow label={t('eyebrow')} num="/book" className="mb-6" />
+          <Eyebrow label={t('eyebrow')} num="/book" className="mb-10" />
 
-          <div className="max-w-3xl mb-14">
-            <h2 className="font-display text-[36px] md:text-[56px] leading-[1.05] tracking-[-0.03em] font-normal">
+          <div className="max-w-3xl mb-20">
+            <h2 className="font-serif text-[36px] md:text-[56px] leading-[1.05] tracking-[-0.03em] font-light [font-variation-settings:'opsz'_96]">
               {t('title').split('—').map((part, i, arr) =>
                 i === 0 ? (
                   <span key={i}>{part}</span>
                 ) : (
                   <span key={i}>
-                    <span className="text-terracotta">—</span>
-                    <span className="italic font-medium text-terracotta-deep">{part}</span>
+                    <span className="text-burgundy">—</span>
+                    <span className="italic font-normal text-burgundy">{part}</span>
                   </span>
                 )
               )}
             </h2>
-            <p className="mt-4 text-[17px] italic font-light text-ink/70 max-w-[52ch]">{t('sub')}</p>
+            <p className="mt-5 font-serif italic font-light text-[17px] text-ink-soft max-w-[52ch]">
+              {t('sub')}
+            </p>
           </div>
         </Reveal>
 

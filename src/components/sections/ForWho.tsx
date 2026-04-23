@@ -10,39 +10,42 @@ export function ForWho() {
   const items = t.raw('items') as Item[];
 
   return (
-    <section id="for-who" className="py-20 md:py-28 border-t border-ink/15">
+    <section id="for-who" className="py-28 md:py-36 border-t border-ink-faint/50">
       <Container>
         <Reveal>
-          <Eyebrow label={t('eyebrow')} num="/for-who" className="mb-6" />
+          <Eyebrow label={t('eyebrow')} num="/for-who" className="mb-10" />
 
-          <div className="max-w-3xl mb-14">
-            <h2 className="font-display text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.03em] font-normal">
+          <div className="max-w-3xl mb-20">
+            <h2 className="font-serif text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.03em] font-light [font-variation-settings:'opsz'_96]">
               {t('title').split(',').map((part, i, arr) =>
                 i === arr.length - 1 ? (
-                  <span key={i} className="italic font-medium text-terracotta-deep">,{part}</span>
+                  <span key={i} className="italic font-normal text-burgundy">,{part}</span>
                 ) : (
                   <span key={i}>{part}</span>
                 )
               )}
             </h2>
-            <p className="mt-4 text-[17px] italic font-light text-ink/70 max-w-[44ch]">{t('sub')}</p>
+            <p className="mt-5 font-sans text-[15px] md:text-[16px] leading-[1.7] text-ink-soft max-w-[52ch]">
+              {t('sub')}
+            </p>
           </div>
         </Reveal>
 
-        <Reveal delay={120} className="grid md:grid-cols-3 gap-5">
+        <Reveal delay={120} className="grid md:grid-cols-3 gap-10 md:gap-12">
           {items.map((item, i) => (
             <article
               key={i}
-              className="bg-paper-light border border-ink/15 rounded-lg p-7 card-shadow transition-transform hover:-translate-y-1"
+              className="border-t border-ink-faint/60 pt-7"
             >
-              <span className="inline-flex items-center gap-2 font-mono text-[10px] font-semibold tracking-widest uppercase text-paper-light bg-moss-deep px-2.5 py-1 rounded-[3px] mb-5">
-                <span className="h-1.5 w-1.5 rounded-full bg-paper-light" />
-                {item.tag}
+              <span className="inline-block font-mono text-[10px] font-medium tracking-[0.2em] uppercase text-burgundy mb-6">
+                {String(i + 1).padStart(2, '0')} — {item.tag}
               </span>
-              <h3 className="font-display font-semibold text-[22px] leading-[1.2] tracking-[-0.02em] mb-3">
+              <h3 className="font-serif font-light text-[24px] leading-[1.2] tracking-[-0.02em] mb-4">
                 {item.title}
               </h3>
-              <p className="text-[14px] leading-[1.6] text-ink/80">{item.body}</p>
+              <p className="font-sans text-[14px] leading-[1.7] text-ink-soft max-w-[38ch]">
+                {item.body}
+              </p>
             </article>
           ))}
         </Reveal>

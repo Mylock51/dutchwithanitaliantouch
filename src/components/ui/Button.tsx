@@ -1,6 +1,6 @@
 import { cn } from '@/lib/cn';
 
-type Variant = 'primary' | 'ink' | 'outline' | 'ghost';
+type Variant = 'primary' | 'ink' | 'outline' | 'link';
 type Size = 'md' | 'lg';
 
 export function Button({
@@ -17,22 +17,30 @@ export function Button({
   children: React.ReactNode;
   className?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
-  const base =
-    'inline-flex items-center gap-2 font-mono font-semibold uppercase tracking-[0.12em] rounded-sm border transition-transform active:translate-y-px';
+  const isLink = variant === 'link';
+
+  const base = isLink
+    ? 'inline-flex items-center gap-2 font-sans font-medium text-[14px] tracking-[0.01em] pb-1 border-b transition-colors'
+    : 'inline-flex items-center gap-2 font-sans font-medium tracking-[0.01em] rounded-xs transition-colors';
 
   const sizes: Record<Size, string> = {
-    md: 'text-[12px] px-5 py-3',
-    lg: 'text-[13px] px-7 py-4',
+    md: 'text-[14px] px-7 py-3.5',
+    lg: 'text-[15px] px-8 py-4',
   };
 
   const variants: Record<Variant, string> = {
-    primary: 'bg-terracotta text-white border-terracotta-deep hover:bg-terracotta-deep',
-    ink: 'bg-ink text-paper-light border-ink hover:bg-ink/90',
-    outline: 'bg-transparent text-ink border-ink hover:bg-ink hover:text-paper-light',
-    ghost: 'bg-transparent text-terracotta-deep border-transparent hover:underline',
+    primary: 'bg-burgundy text-bone-light hover:bg-burgundy-deep',
+    ink: 'bg-ink text-bone-light hover:bg-ink/90',
+    outline: 'bg-transparent text-ink border border-ink hover:bg-ink hover:text-bone-light',
+    link: 'text-ink border-ink hover:text-burgundy hover:border-burgundy',
   };
 
-  const classes = cn(base, sizes[size], variants[variant], className);
+  const classes = cn(
+    base,
+    !isLink && sizes[size],
+    variants[variant],
+    className
+  );
 
   if (href) {
     return (

@@ -1,53 +1,44 @@
 {
   "name": "Dutch with an Italian Touch",
-  "tagline": "Coaching for working mothers",
+  "tagline": "For women finding their footing",
   "languages": ["it", "en", "nl"],
   "colors": {
-    "paper": "#F2EBDC",
-    "paper-light": "#F8F3E6",
-    "paper-deep": "#E8DFC9",
-    "paper-warm": "#EDE2C8",
-    "ink": "#1F1A14",
-    "ink-soft": "#8A7A64",
+    "bone": "#F5EFE8",
+    "bone-light": "#FAF6EF",
+    "bone-deep": "#EAE1D3",
+    "sand": "#E8DECB",
+    "linen": "#EFE6D5",
+    "ink": "#1F1A17",
+    "ink-soft": "#7A6F62",
     "ink-faint": "#B9AD93",
-    "terracotta": "#C2532A",
-    "terracotta-deep": "#8F3A1C",
-    "terracotta-light": "#E07D4F",
-    "moss": "#4A5D2A",
-    "moss-deep": "#2F3D18",
-    "moss-light": "#7A9445",
-    "ochre": "#C89234",
-    "ochre-deep": "#9A6F1F",
-    "ochre-light": "#E4B05A"
+    "burgundy": "#6E1F2A",
+    "burgundy-deep": "#4A141D",
+    "burgundy-soft": "#7A3840",
+    "brown": "#8B6F54",
+    "brown-soft": "#B8A088",
+    "brown-deep": "#5C4836"
   },
   "status": {
-    "good": "#4A5D2A",
-    "warn": "#C89234",
-    "bad": "#8F3A1C",
-    "info": "#8A7A64"
-  },
-  "gradients": {
-    "paper": "linear-gradient(135deg,#F8F3E6,#E8DFC9)",
-    "terra": "linear-gradient(135deg,#E07D4F,#8F3A1C)",
-    "moss": "linear-gradient(135deg,#7A9445,#2F3D18)",
-    "ochre": "linear-gradient(135deg,#E4B05A,#9A6F1F)",
-    "dusk": "linear-gradient(135deg,#C2532A,#C89234,#4A5D2A)"
+    "good": "#5C4836",
+    "warn": "#8B6F54",
+    "bad": "#6E1F2A",
+    "info": "#7A6F62"
   },
   "typography": {
-    "display": { "family": "Fraunces", "weight": 400, "size": 96, "lineHeight": 100, "tracking": "-0.04em" },
-    "h1": { "family": "Fraunces", "weight": 400, "size": 56, "lineHeight": 60, "tracking": "-0.03em" },
-    "h2": { "family": "Fraunces", "weight": 500, "size": 40, "lineHeight": 48 },
-    "h3": { "family": "Fraunces", "weight": 600, "size": 24, "lineHeight": 32 },
-    "body": { "family": "Fraunces", "weight": 400, "size": 15, "lineHeight": 24 },
-    "small": { "family": "Fraunces", "weight": 400, "size": 13, "lineHeight": 20 },
-    "meta": { "family": "JetBrains Mono", "weight": 600, "size": 11, "tracking": "0.15em", "transform": "uppercase" }
+    "display": { "family": "Fraunces", "weight": 250, "size": 96, "lineHeight": 100, "tracking": "-0.04em", "opsz": 144 },
+    "h1": { "family": "Fraunces", "weight": 300, "size": 56, "lineHeight": 60, "tracking": "-0.03em", "opsz": 96 },
+    "h2": { "family": "Fraunces", "weight": 300, "size": 40, "lineHeight": 48, "opsz": 96 },
+    "h3": { "family": "Fraunces", "weight": 400, "size": 22, "lineHeight": 28 },
+    "lede": { "family": "Inter", "weight": 400, "size": 17, "lineHeight": 28 },
+    "body": { "family": "Inter", "weight": 400, "size": 14, "lineHeight": 24 },
+    "meta": { "family": "JetBrains Mono", "weight": 500, "size": 10, "tracking": "0.22em", "transform": "uppercase" }
   },
   "space": { "s1": 4, "s2": 8, "s3": 12, "s4": 16, "s5": 24, "s6": 32, "s7": 48, "s8": 64, "s9": 96, "s10": 128 },
   "radius": { "xs": 2, "sm": 4, "md": 8, "lg": 12, "xl": 16, "2xl": 24 },
   "logo": {
     "type": "placeholder-monogram",
     "glyphs": "d·i",
-    "typeface": "Fraunces italic 500",
+    "typeface": "Fraunces italic 300",
     "minSize": 20,
     "clearspace": "x = cap height"
   }

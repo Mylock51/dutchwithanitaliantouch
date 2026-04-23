@@ -44,7 +44,7 @@ export function LangSwitcher({ className }: { className?: string }) {
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-ink/60 bg-paper text-ink text-[11px] font-mono font-medium tracking-wider hover:bg-paper-deep transition"
+        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-ink-faint bg-bone-light text-ink text-[11px] font-mono font-medium tracking-[0.15em] hover:border-burgundy transition-colors"
       >
         <span aria-hidden>{current.flag}</span>
         <span>{current.name}</span>
@@ -63,7 +63,7 @@ export function LangSwitcher({ className }: { className?: string }) {
         <ul
           role="listbox"
           aria-label="Language"
-          className="absolute right-0 mt-2 min-w-[160px] rounded-xl border border-ink/15 bg-paper-light shadow-lg py-1 z-50"
+          className="absolute right-0 mt-2 min-w-[170px] rounded-sm border border-ink-faint/60 bg-bone-light shadow-[0_8px_24px_rgba(31,26,23,0.08)] py-1 z-50"
         >
           {routing.locales.map((loc) => {
             const isActive = loc === locale;
@@ -78,13 +78,13 @@ export function LangSwitcher({ className }: { className?: string }) {
                     if (!isActive) router.replace(pathname, { locale: loc });
                   }}
                   className={cn(
-                    'w-full flex items-center gap-2.5 px-3 py-2 text-left text-[13px] transition',
-                    isActive ? 'bg-ink/5 text-ink' : 'text-ink/80 hover:bg-ink/5'
+                    'w-full flex items-center gap-2.5 px-3 py-2 text-left font-sans text-[13px] transition-colors',
+                    isActive ? 'text-burgundy' : 'text-ink-soft hover:text-ink'
                   )}
                 >
                   <span aria-hidden>{LABELS[loc].flag}</span>
                   <span className="font-medium">{LABELS[loc].full}</span>
-                  <span className="ml-auto font-mono text-[10px] tracking-widest text-ink-soft">
+                  <span className="ml-auto font-mono text-[10px] tracking-[0.15em] text-ink-faint">
                     {LABELS[loc].name}
                   </span>
                 </button>

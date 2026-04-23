@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Fraunces, JetBrains_Mono } from 'next/font/google';
+import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale, getTranslations, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -10,6 +10,12 @@ const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-fraunces',
   axes: ['opsz'],
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
   display: 'swap',
 });
 
@@ -51,7 +57,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${fraunces.variable} ${jetbrains.variable}`}>
+    <html lang={locale} className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable}`}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

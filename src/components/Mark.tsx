@@ -9,7 +9,7 @@ export function Mark({
   size = 48,
   className,
   color = 'currentColor',
-  accent = '#C2532A',
+  accent = '#6E1F2A',
 }: Props) {
   return (
     <svg
@@ -19,7 +19,7 @@ export function Mark({
       className={className}
       aria-label="Dutch with an Italian Touch logo"
     >
-      <circle cx="60" cy="60" r="56" fill="none" stroke={color} strokeWidth={2} />
+      <circle cx="60" cy="60" r="56" fill="none" stroke={color} strokeWidth={1.5} />
       <text
         x="60"
         y="80"
@@ -27,7 +27,7 @@ export function Mark({
         fontFamily="var(--font-serif)"
         fontSize="62"
         fontStyle="italic"
-        fontWeight={500}
+        fontWeight={300}
         fill={color}
         style={{ fontVariationSettings: "'opsz' 144" }}
       >

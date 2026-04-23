@@ -10,32 +10,32 @@ export function Testimonials() {
   const items = t.raw('items') as Item[];
 
   return (
-    <section className="py-20 md:py-28 border-t border-ink/15">
+    <section className="py-28 md:py-36 border-t border-ink-faint/50">
       <Container>
         <Reveal>
-          <Eyebrow label={t('eyebrow')} num="/voices" className="mb-12" />
+          <Eyebrow label={t('eyebrow')} num="/voices" className="mb-20" />
         </Reveal>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           {items.map((item, i) => (
             <Reveal
               as="figure"
               key={i}
               delay={i * 140}
-              className="relative bg-paper-light border border-ink/15 rounded-xl p-8 md:p-10 card-shadow"
+              className="border-t border-ink-faint/60 pt-8"
             >
               <span
                 aria-hidden
-                className="absolute top-4 left-6 font-display italic text-[80px] leading-none text-terracotta/30 select-none"
+                className="font-serif italic text-[56px] leading-none text-burgundy/30 select-none block mb-2"
               >
                 &ldquo;
               </span>
-              <blockquote className="relative font-display italic text-[20px] md:text-[24px] leading-[1.35] text-ink">
+              <blockquote className="font-serif italic font-light text-[22px] md:text-[26px] leading-[1.35] text-ink max-w-[38ch]">
                 {item.quote}
               </blockquote>
-              <figcaption className="mt-6 pt-4 border-t border-dotted border-ink/15">
-                <div className="font-display font-semibold text-[15px] text-ink">{item.author}</div>
-                <div className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mt-1">
+              <figcaption className="mt-8 pt-5 border-t border-dotted border-ink-faint/60">
+                <div className="font-serif text-[15px] font-normal text-ink">{item.author}</div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-soft mt-1.5">
                   {item.context}
                 </div>
               </figcaption>
