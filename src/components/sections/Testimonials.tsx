@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/Container';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Reveal } from '@/components/Reveal';
 
 type Item = { quote: string; author: string; context: string };
@@ -8,40 +7,24 @@ type Item = { quote: string; author: string; context: string };
 export function Testimonials() {
   const t = useTranslations('testimonials');
   const items = t.raw('items') as Item[];
+  const featured = items[0];
 
   return (
-    <section className="py-28 md:py-36 border-t border-ink-faint/50">
+    <section className="py-32 md:py-48 bg-sand border-t border-ink-faint/40">
       <Container>
-        <Reveal>
-          <Eyebrow label={t('eyebrow')} num="/voices" className="mb-20" />
-        </Reveal>
+        <Reveal className="max-w-[48rem] mx-auto text-center">
+          <div className="font-meta text-ink-soft mb-10">{t('eyebrow')}</div>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-          {items.map((item, i) => (
-            <Reveal
-              as="figure"
-              key={i}
-              delay={i * 140}
-              className="border-t border-ink-faint/60 pt-8"
-            >
-              <span
-                aria-hidden
-                className="font-serif italic text-[56px] leading-none text-burgundy/30 select-none block mb-2"
-              >
-                &ldquo;
-              </span>
-              <blockquote className="font-serif italic font-light text-[22px] md:text-[26px] leading-[1.35] text-ink max-w-[38ch]">
-                {item.quote}
-              </blockquote>
-              <figcaption className="mt-8 pt-5 border-t border-dotted border-ink-faint/60">
-                <div className="font-serif text-[15px] font-normal text-ink">{item.author}</div>
-                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-soft mt-1.5">
-                  {item.context}
-                </div>
-              </figcaption>
-            </Reveal>
-          ))}
-        </div>
+          <blockquote className="font-serif italic font-light text-[28px] md:text-[40px] leading-[1.25] tracking-[-0.02em] text-ink">
+            &ldquo;{featured.quote}&rdquo;
+          </blockquote>
+
+          <figcaption className="mt-12 font-meta text-ink-soft flex flex-wrap justify-center gap-x-4 gap-y-1">
+            <span>{featured.author}</span>
+            <span className="text-ink-faint">·</span>
+            <span>{featured.context}</span>
+          </figcaption>
+        </Reveal>
       </Container>
     </section>
   );

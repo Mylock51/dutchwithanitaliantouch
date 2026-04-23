@@ -213,7 +213,7 @@ export default async function ForCompaniesPage({
               <div className="mt-10 flex flex-wrap items-center gap-8">
                 <a
                   href="mailto:hello@dwait.com?subject=Her%20Next%20Chapter%20Live%20%E2%80%94%20enquiry"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-burgundy text-bone-light font-sans font-medium text-[15px] tracking-[0.01em] rounded-xs hover:bg-burgundy-deep transition-colors"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-burgundy text-bone-light font-sans font-medium text-[15px] tracking-[0.01em] rounded-md hover:bg-burgundy-deep transition-colors"
                 >
                   Get in touch <span className="font-serif italic font-light">→</span>
                 </a>

@@ -21,7 +21,7 @@ export function Button({
 
   const base = isLink
     ? 'inline-flex items-center gap-2 font-sans font-medium text-[14px] tracking-[0.01em] pb-1 border-b transition-colors'
-    : 'inline-flex items-center gap-2 font-sans font-medium tracking-[0.01em] rounded-xs transition-colors';
+    : 'inline-flex items-center gap-2 font-sans font-medium tracking-[0.01em] rounded-md transition-colors';
 
   const sizes: Record<Size, string> = {
     md: 'text-[14px] px-7 py-3.5',

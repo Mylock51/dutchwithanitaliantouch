@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;1,6..72,300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        'bone': '#F5EFE8',
+                        'bone-light': '#FAF6EF',
+                        'bone-deep': '#EAE1D3',
+                        'sand': '#E8DECB',
+                        'ink': '#1F1A17',
+                        'ink-soft': '#7A6F62',
+                        'ink-faint': 'rgba(185, 173, 147, 0.2)',
+                        'burgundy': '#6E1F2A',
+                        'burgundy-deep': '#4A141D',
+                        'brown': '#8B6F54',
+                        'brown-deep': '#5C4836'
+                    },
+                    borderRadius: {
+                        'DEFAULT': '0.25rem',
+                        'md': '0.5rem',
+                        'lg': '0.75rem',
+                        'xl': '1rem',
+                        'full': '9999px'
+                    },
+                    fontFamily: {
+                        'headline': ['Newsreader', 'serif'],
+                        'display': ['Newsreader', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                        'label': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace']
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #F5EFE8; color: #1F1A17; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; }
+        .logo-italic { font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; }
+        .newsreader-light { font-family: 'Newsreader', serif; font-weight: 300; }
+    </style>
+</head>
+<body class="bg-bone text-ink selection:bg-burgundy/10">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#F5EFE8] border-b border-[#B9AD93]/20">
+<div class="flex justify-between items-center w-full px-6 py-4 md:px-12 max-w-[1200px] mx-auto h-20">
+<!-- Monogram -->
+<div class="logo-italic text-3xl text-[#1F1A17]">d·i</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-gap-8 gap-x-10">
+<a class="text-[#7A6F62] hover:text-[#1F1A17] transition-colors text-sm font-label" href="#">Approach</a>
+<a class="text-[#7A6F62] hover:text-[#1F1A17] transition-colors text-sm font-label" href="#">Benefits</a>
+<a class="text-[#7A6F62] hover:text-[#1F1A17] transition-colors text-sm font-label" href="#">How it works</a>
+<a class="text-[#7A6F62] hover:text-[#1F1A17] transition-colors text-sm font-label" href="#">FAQ</a>
+</div>
+<!-- Trailing Action -->
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-4 eyebrow text-ink-soft text-[10px]">
+<span class="hover:text-burgundy cursor-pointer">IT</span>
+<span class="hover:text-burgundy cursor-pointer">EN</span>
+<span class="text-burgundy">NL</span>
+</div>
+<button class="bg-[#6E1F2A] text-[#F5EFE8] px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-[#4A141D] transition-all duration-200">
+                    Book a call
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7">
+<span class="eyebrow block mb-6 text-brown">Coaching · 1:1 · online</span>
+<h1 class="newsreader-light text-5xl md:text-[72px] leading-[1.05] tracking-tight mb-8">
+                    Back to work<br/>
+<span class="italic">without losing</span><br/>
+                    yourself.
+                </h1>
+<p class="text-[#5C4836] text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-body">
+                    A dedicated coaching space for high-achieving mothers navigating the return to professional life. Reclaim your ambition without compromising your presence.
+                </p>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12">
+<button class="bg-burgundy text-bone-light px-8 py-3.5 rounded-lg text-[14px] font-medium hover:bg-burgundy-deep transition-all">
+                        Book a session
+                    </button>
+<a class="text-ink text-sm font-medium border-b border-ink/20 pb-0.5 hover:border-burgundy transition-all" href="#">
+                        See how it works →
+                    </a>
+</div>
+<div class="flex gap-8 border-t border-ink-faint pt-6">
+<div>
+<span class="eyebrow block text-[10px] text-ink-soft mb-1">Method</span>
+<span class="text-xs uppercase tracking-wider font-mono">Editorial · Human</span>
+</div>
+<div>
+<span class="eyebrow block text-[10px] text-ink-soft mb-1">Focus</span>
+<span class="text-xs uppercase tracking-wider font-mono">Transition · Identity</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] w-full overflow-hidden rounded-lg shadow-sm">
+<img alt="Coach portrait" class="w-full h-full object-cover" data-alt="Editorial portrait of a woman coach in a warm minimalist interior, soft natural light, professional yet warm gaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDekrQgSYQkhblrFFmBiA8x87I5agUSyOT2k-l05g22JicbV-Z8TclMz7_y1tTRysgWCJXr9M6qMlwhtFxYCUP4KPPsxWoznGqFfKkwK_dbLxHft4y2Vl451DQmq1Ds3cV34IwgV5Ua9XAFU313-lSw2zWyaKz47_2TtHJvL02cqIY7h2FIC-5FWdu_Koz1X3QrMJArx9rinHYYVD3zJWS5IQLSo8ibvHAgTk4BCwKXqzI5svizsLB6RLUFdAnf6hCd_U2tGg_24ONR"/>
+</div>
+<span class="eyebrow text-[9px] text-ink-soft mt-3 block text-right italic">Maaike · coach</span>
+</div>
+</section>
+<!-- Who it's for -->
+<section class="bg-bone-deep py-24 md:py-32">
+<div class="max-w-[1200px] mx-auto px-6 md:px-12">
+<span class="eyebrow block mb-6 text-burgundy">01 · Who it's for</span>
+<h2 class="newsreader-light text-4xl md:text-5xl mb-16 max-w-2xl">Three mothers, one shared pattern.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-bone-light p-8 md:p-10 rounded-lg border-t-2 border-burgundy">
+<span class="eyebrow text-[10px] text-brown mb-6 block">Return</span>
+<h3 class="newsreader-light text-2xl mb-4">The Executive</h3>
+<p class="text-ink-soft text-sm leading-relaxed">
+                            Returning to a high-pressure role while navigating the emotional complexity of new motherhood. Seeking a strategy that respects both worlds.
+                        </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-bone-light p-8 md:p-10 rounded-lg border-t-2 border-burgundy">
+<span class="eyebrow text-[10px] text-brown mb-6 block">Pivot</span>
+<h3 class="newsreader-light text-2xl mb-4">The Visionary</h3>
+<p class="text-ink-soft text-sm leading-relaxed">
+                            Realizing the old path no longer fits. Looking to redesign professional identity around new values without starting from zero.
+                        </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-bone-light p-8 md:p-10 rounded-lg border-t-2 border-burgundy">
+<span class="eyebrow text-[10px] text-brown mb-6 block">Balance</span>
+<h3 class="newsreader-light text-2xl mb-4">The Creative</h3>
+<p class="text-ink-soft text-sm leading-relaxed">
+                            Managing freelance or creative pursuits while establishing firm boundaries. Finding the rhythm between output and presence.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits -->
+<section class="py-24 md:py-32 bg-bone">
+<div class="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-5">
+<span class="eyebrow block mb-6 text-brown">02 · Benefits</span>
+<h2 class="newsreader-light text-4xl md:text-5xl leading-tight">What you walk away with.</h2>
+</div>
+<div class="md:col-span-7 flex flex-col">
+<div class="group border-t border-ink-faint py-8 flex items-baseline gap-8">
+<span class="font-mono text-xs text-ink-faint group-hover:text-burgundy transition-colors">01</span>
+<div>
+<h3 class="newsreader-light text-2xl mb-2">Clarity of Identity</h3>
+<p class="text-ink-soft text-sm max-w-md">Distinguish between professional expectations and your authentic needs as a mother and leader.</p>
+</div>
+</div>
+<div class="group border-t border-ink-faint py-8 flex items-baseline gap-8">
+<span class="font-mono text-xs text-ink-faint group-hover:text-burgundy transition-colors">02</span>
+<div>
+<h3 class="newsreader-light text-2xl mb-2">Sovereign Boundaries</h3>
+<p class="text-ink-soft text-sm max-w-md">Practical frameworks to protect your time and energy without the weight of guilt.</p>
+</div>
+</div>
+<div class="group border-t border-ink-faint py-8 flex items-baseline gap-8">
+<span class="font-mono text-xs text-ink-faint group-hover:text-burgundy transition-colors">03</span>
+<div>
+<h3 class="newsreader-light text-2xl mb-2">Emotional Resilience</h3>
+<p class="text-ink-soft text-sm max-w-md">Tools to navigate the transition jitters and the "mental load" with calm precision.</p>
+</div>
+</div>
+<div class="group border-t border-ink-faint py-8 flex items-baseline gap-8 border-b">
+<span class="font-mono text-xs text-ink-faint group-hover:text-burgundy transition-colors">04</span>
+<div>
+<h3 class="newsreader-light text-2xl mb-2">Sustainable Ambition</h3>
+<p class="text-ink-soft text-sm max-w-md">A long-term vision for your career that fuels you rather than drains you.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Full Bleed -->
+<section class="bg-sand py-32 md:py-48 px-6 overflow-hidden">
+<div class="max-w-4xl mx-auto text-center">
+<blockquote class="newsreader-light italic text-3xl md:text-[40px] leading-tight text-ink mb-12">
+                    "After two sessions I finally stopped negotiating with my own ambition. I realized that being a mother didn't mean making myself smaller."
+                </blockquote>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-[1px] bg-burgundy mb-2"></div>
+<span class="eyebrow text-[10px] text-brown-deep uppercase">Giulia M. · back to work after maternity · Milan</span>
+</div>
+</div>
+</section>
+<!-- How it works -->
+<section class="py-24 md:py-32 bg-bone-light">
+<div class="max-w-[1200px] mx-auto px-6 md:px-12">
+<span class="eyebrow block mb-6 text-brown">03 · How it works</span>
+<h2 class="newsreader-light text-4xl md:text-5xl mb-20">A simple path.</h2>
+<div class="space-y-0">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-12 border-t border-ink-faint">
+<div class="md:col-span-1">
+<span class="font-mono text-xs text-burgundy">01</span>
+</div>
+<div class="md:col-span-4">
+<h3 class="newsreader-light text-2xl">The Intake</h3>
+</div>
+<div class="md:col-span-7">
+<p class="text-ink-soft leading-relaxed text-sm md:text-base">A 30-minute consultation to map your current landscape and ensure our chemistry aligns. We focus on the concrete challenges of your return.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-12 border-t border-ink-faint">
+<div class="md:col-span-1">
+<span class="font-mono text-xs text-burgundy">02</span>
+</div>
+<div class="md:col-span-4">
+<h3 class="newsreader-light text-2xl">The Blueprint</h3>
+</div>
+<div class="md:col-span-7">
+<p class="text-ink-soft leading-relaxed text-sm md:text-base">We define 3 core pillars for your coaching journey. This is your personal roadmap—targeted, honest, and achievable.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-12 border-t border-ink-faint">
+<div class="md:col-span-1">
+<span class="font-mono text-xs text-burgundy">03</span>
+</div>
+<div class="md:col-span-4">
+<h3 class="newsreader-light text-2xl">Active Sessions</h3>
+</div>
+<div class="md:col-span-7">
+<p class="text-ink-soft leading-relaxed text-sm md:text-base">Bi-weekly 60-minute calls. We tackle real-time friction at work and home, refining your tools as you apply them.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-12 border-t border-ink-faint border-b">
+<div class="md:col-span-1">
+<span class="font-mono text-xs text-burgundy">04</span>
+</div>
+<div class="md:col-span-4">
+<h3 class="newsreader-light text-2xl">The Sustain Phase</h3>
+</div>
+<div class="md:col-span-7">
+<p class="text-ink-soft leading-relaxed text-sm md:text-base">A final wrap-up session to cement your new boundaries and ensure you have a long-term support structure in place.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-24 md:py-32 bg-bone">
+<div class="max-w-[720px] mx-auto px-6">
+<span class="eyebrow block mb-6 text-center text-brown">04 · FAQ</span>
+<h2 class="newsreader-light text-4xl text-center mb-16">Questions you might have.</h2>
+<div class="divide-y divide-ink-faint">
+<div class="py-6">
+<button class="flex justify-between items-center w-full text-left group">
+<span class="text-ink font-label">How many sessions do I need?</span>
+<span class="material-symbols-outlined text-ink-faint group-hover:text-burgundy transition-colors" data-icon="add">add</span>
+</button>
+</div>
+<div class="py-6">
+<button class="flex justify-between items-center w-full text-left group">
+<span class="text-ink font-label">Is this available only in the Netherlands?</span>
+<span class="material-symbols-outlined text-ink-faint group-hover:text-burgundy transition-colors" data-icon="add">add</span>
+</button>
+</div>
+<div class="py-6">
+<button class="flex justify-between items-center w-full text-left group">
+<span class="text-ink font-label">Do you offer sessions in multiple languages?</span>
+<span class="material-symbols-outlined text-ink-faint group-hover:text-burgundy transition-colors" data-icon="remove">remove</span>
+</button>
+<div class="mt-4 text-ink-soft text-sm leading-relaxed">
+                            Yes, I coach in English, Italian, and Dutch. This allows for a deeper connection when expressing complex emotional or cultural nuances.
+                        </div>
+</div>
+<div class="py-6">
+<button class="flex justify-between items-center w-full text-left group">
+<span class="text-ink font-label">What is the investment?</span>
+<span class="material-symbols-outlined text-ink-faint group-hover:text-burgundy transition-colors" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="bg-bone-deep py-24 md:py-32">
+<div class="max-w-[1200px] mx-auto px-6 text-center">
+<div class="logo-italic text-4xl text-ink mb-12">d·i</div>
+<h2 class="newsreader-light text-4xl md:text-5xl mb-6">Start where you are.</h2>
+<p class="text-ink-soft text-lg mb-10 max-w-md mx-auto leading-relaxed">
+                    The transition back to work is a profound opportunity to redefine your life on your own terms.
+                </p>
+<button class="bg-burgundy text-bone-light px-10 py-4 rounded-lg text-sm font-medium hover:bg-burgundy-deep transition-all">
+                    Book a session
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-bone border-t border-[#B9AD93]/30 pt-24 pb-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-6 py-16 md:px-12 max-w-[1200px] mx-auto">
+<div class="col-span-2 md:col-span-1">
+<div class="text-xl font-light italic font-serif mb-6 logo-italic">d·i</div>
+<p class="text-brown-deep text-[13px] leading-relaxed max-w-[200px]">
+                    Empowering high-achieving mothers through transition.
+                </p>
+</div>
+<div>
+<span class="eyebrow text-[10px] text-ink-soft mb-6 block">Company</span>
+<ul class="space-y-4">
+<li><a class="text-[#5C4836] hover:text-[#6E1F2A] hover:underline underline-offset-4 text-xs font-label" href="#">Approach</a></li>
+<li><a class="text-[#5C4836] hover:text-[#6E1F2A] hover:underline underline-offset-4 text-xs font-label" href="#">Journal</a></li>
+<li><a class="text-[#5C4836] hover:text-[#6E1F2A] hover:underline underline-offset-4 text-xs font-label" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<span class="eyebrow text-[10px] text-ink-soft mb-6 block">Services</span>
+<ul class="space-y-4">
+<li><a class="text-[#5C4836] hover:text-[#6E1F2A] hover:underline underline-offset-4 text-xs font-label" href="#">1:1 Coaching</a></li>
+<li><a class="text-[#5C4836] hover:text-[#6E1F2A] hover:underline underline-offset-4 text-xs font-label" href="#">Workshops</a></li>
+<li><a class="text-[#5C4836] hover:text-[#6E1F2A] hover:underline underline-offset-4 text-xs font-label" href="#">Consulting</a></li>
+</ul>
+</div>
+<div>
+<span class="eyebrow text-[10px] text-ink-soft mb-6 block">Contact</span>
+<ul class="space-y-4">
+<li><a class="text-[#5C4836] hover:text-[#6E1F2A] hover:underline underline-offset-4 text-xs font-label" href="#">Instagram</a></li>
+<li><a class="text-[#5C4836] hover:text-[#6E1F2A] hover:underline underline-offset-4 text-xs font-label" href="#">LinkedIn</a></li>
+<li><a class="text-[#5C4836] hover:text-[#6E1F2A] hover:underline underline-offset-4 text-xs font-label" href="mailto:hello@dutchitalian.com">Email</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-6 md:px-12 mt-16 pt-8 border-t border-ink-faint flex flex-col md:row items-center justify-between gap-4">
+<span class="font-mono text-[11px] text-ink-soft">© Dutch with an Italian Touch. All rights reserved.</span>
+<div class="flex gap-6 items-center">
+<a class="font-mono text-[11px] text-ink-soft hover:text-burgundy" href="#">Privacy</a>
+<a class="font-mono text-[11px] text-ink-soft hover:text-burgundy" href="#">Terms</a>
+<div class="flex gap-2 ml-4">
+<span class="text-[10px] font-mono text-burgundy">IT</span>
+<span class="text-[10px] font-mono text-ink-faint">·</span>
+<span class="text-[10px] font-mono text-ink-soft">EN</span>
+<span class="text-[10px] font-mono text-ink-faint">·</span>
+<span class="text-[10px] font-mono text-ink-soft">NL</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
