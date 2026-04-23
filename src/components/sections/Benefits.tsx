@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Reveal } from '@/components/Reveal';
 
 type Item = { title: string; body: string };
 
@@ -13,16 +14,18 @@ export function Benefits() {
   return (
     <section id="benefits" className="py-20 md:py-28 border-t border-ink/15">
       <Container>
-        <Eyebrow label={t('eyebrow')} num="/benefits" className="mb-6" />
+        <Reveal>
+          <Eyebrow label={t('eyebrow')} num="/benefits" className="mb-6" />
 
-        <div className="max-w-3xl mb-14">
-          <h2 className="font-display text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.03em] font-normal">
-            {t('title')}
-          </h2>
-          <p className="mt-4 text-[17px] italic font-light text-ink/70 max-w-[52ch]">{t('sub')}</p>
-        </div>
+          <div className="max-w-3xl mb-14">
+            <h2 className="font-display text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.03em] font-normal">
+              {t('title')}
+            </h2>
+            <p className="mt-4 text-[17px] italic font-light text-ink/70 max-w-[52ch]">{t('sub')}</p>
+          </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 border border-ink/60 rounded-lg overflow-hidden bg-paper-light card-shadow">
+        <Reveal delay={120} className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 border border-ink/60 rounded-lg overflow-hidden bg-paper-light card-shadow">
           {items.map((item, i) => {
             const accent = accents[i % accents.length];
             return (
@@ -43,7 +46,7 @@ export function Benefits() {
               </article>
             );
           })}
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

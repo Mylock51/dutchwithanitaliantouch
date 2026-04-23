@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Reveal } from '@/components/Reveal';
 
 type Item = { quote: string; author: string; context: string };
 
@@ -11,12 +12,16 @@ export function Testimonials() {
   return (
     <section className="py-20 md:py-28 border-t border-ink/15">
       <Container>
-        <Eyebrow label={t('eyebrow')} num="/voices" className="mb-12" />
+        <Reveal>
+          <Eyebrow label={t('eyebrow')} num="/voices" className="mb-12" />
+        </Reveal>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {items.map((item, i) => (
-            <figure
+            <Reveal
+              as="figure"
               key={i}
+              delay={i * 140}
               className="relative bg-paper-light border border-ink/15 rounded-xl p-8 md:p-10 card-shadow"
             >
               <span
@@ -34,7 +39,7 @@ export function Testimonials() {
                   {item.context}
                 </div>
               </figcaption>
-            </figure>
+            </Reveal>
           ))}
         </div>
       </Container>

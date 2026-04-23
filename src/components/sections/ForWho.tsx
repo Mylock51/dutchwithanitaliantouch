@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Reveal } from '@/components/Reveal';
 
 type Item = { tag: string; title: string; body: string };
 
@@ -11,22 +12,24 @@ export function ForWho() {
   return (
     <section id="for-who" className="py-20 md:py-28 border-t border-ink/15">
       <Container>
-        <Eyebrow label={t('eyebrow')} num="/for-who" className="mb-6" />
+        <Reveal>
+          <Eyebrow label={t('eyebrow')} num="/for-who" className="mb-6" />
 
-        <div className="max-w-3xl mb-14">
-          <h2 className="font-display text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.03em] font-normal">
-            {t('title').split(',').map((part, i, arr) =>
-              i === arr.length - 1 ? (
-                <span key={i} className="italic font-medium text-terracotta-deep">,{part}</span>
-              ) : (
-                <span key={i}>{part}</span>
-              )
-            )}
-          </h2>
-          <p className="mt-4 text-[17px] italic font-light text-ink/70 max-w-[44ch]">{t('sub')}</p>
-        </div>
+          <div className="max-w-3xl mb-14">
+            <h2 className="font-display text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.03em] font-normal">
+              {t('title').split(',').map((part, i, arr) =>
+                i === arr.length - 1 ? (
+                  <span key={i} className="italic font-medium text-terracotta-deep">,{part}</span>
+                ) : (
+                  <span key={i}>{part}</span>
+                )
+              )}
+            </h2>
+            <p className="mt-4 text-[17px] italic font-light text-ink/70 max-w-[44ch]">{t('sub')}</p>
+          </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <Reveal delay={120} className="grid md:grid-cols-3 gap-5">
           {items.map((item, i) => (
             <article
               key={i}
@@ -42,7 +45,7 @@ export function ForWho() {
               <p className="text-[14px] leading-[1.6] text-ink/80">{item.body}</p>
             </article>
           ))}
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

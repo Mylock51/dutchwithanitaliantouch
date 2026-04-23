@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Reveal } from '@/components/Reveal';
 
 type Item = { q: string; a: string };
 
@@ -15,13 +16,15 @@ export function FAQ() {
   return (
     <section id="faq" className="py-20 md:py-28 border-t border-ink/15">
       <Container>
-        <Eyebrow label={t('eyebrow')} num="/faq" className="mb-6" />
+        <Reveal>
+          <Eyebrow label={t('eyebrow')} num="/faq" className="mb-6" />
 
-        <h2 className="font-display text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.03em] font-normal max-w-2xl mb-12">
-          {t('title')}
-        </h2>
+          <h2 className="font-display text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.03em] font-normal max-w-2xl mb-12">
+            {t('title')}
+          </h2>
+        </Reveal>
 
-        <div className="max-w-3xl divide-y divide-ink/15 border-y border-ink/40">
+        <Reveal delay={120} className="max-w-3xl divide-y divide-ink/15 border-y border-ink/40">
           {items.map((item, i) => {
             const isOpen = open === i;
             return (
@@ -56,7 +59,7 @@ export function FAQ() {
               </div>
             );
           })}
-        </div>
+        </Reveal>
       </Container>
     </section>
   );
