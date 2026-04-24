@@ -10,7 +10,7 @@ export function Testimonials() {
   const featured = items[0];
 
   return (
-    <section className="py-32 md:py-48 bg-sand border-t border-ink-faint/40">
+    <section className="py-28 md:py-36 bg-sand border-t border-ink-faint/40">
       <Container>
         <Reveal className="max-w-[48rem] mx-auto text-center">
           <div className="font-meta text-ink-soft mb-10">{t('eyebrow')}</div>

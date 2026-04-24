@@ -6,13 +6,6 @@ export function ForCompaniesBand() {
   const locale = useLocale();
   const t = useTranslations('forCompaniesBand');
 
-  // body has an <em>…</em> wrapping the programme name — split around it
-  const bodyRaw = t('body');
-  const bodyMatch = bodyRaw.match(/^(.*?)<em>(.*?)<\/em>(.*)$/s);
-  const bodyParts = bodyMatch
-    ? { before: bodyMatch[1], em: bodyMatch[2], after: bodyMatch[3] }
-    : { before: bodyRaw, em: '', after: '' };
-
   return (
     <section className="py-20 md:py-24 border-t border-ink-faint/50 bg-bone-deep/30">
       <Container>
@@ -30,11 +23,11 @@ export function ForCompaniesBand() {
 
             <div>
               <p className="font-sans text-[15px] md:text-[16px] leading-[1.7] text-ink-soft max-w-[56ch]">
-                {bodyParts.before}
-                {bodyParts.em && (
-                  <span className="font-serif italic font-normal text-ink">{bodyParts.em}</span>
-                )}
-                {bodyParts.after}
+                {t.rich('body', {
+                  em: (chunks) => (
+                    <span className="font-serif italic font-normal text-ink">{chunks}</span>
+                  ),
+                })}
               </p>
 
               <a

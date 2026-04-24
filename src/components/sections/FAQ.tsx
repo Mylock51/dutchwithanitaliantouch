@@ -14,7 +14,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-28 md:py-36 border-t border-ink-faint/50">
+    <section id="faq" className="py-20 md:py-24 border-t border-ink-faint/50">
       <Container>
         <Reveal>
           <Eyebrow label={t('eyebrow')} num="/faq" className="mb-10" />

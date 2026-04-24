@@ -10,6 +10,7 @@ const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-fraunces',
   axes: ['opsz'],
+  style: ['normal', 'italic'],
   display: 'swap',
 });
 
@@ -39,6 +40,9 @@ export async function generateMetadata({
   return {
     title: `Dutch with an Italian Touch — ${t('titleStart')} ${t('titleEm')} ${t('titleEnd')}`,
     description: t('sub'),
+    icons: {
+      icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    },
   };
 }
 

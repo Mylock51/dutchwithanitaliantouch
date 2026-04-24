@@ -10,7 +10,7 @@ export function HowItWorks() {
   const steps = t.raw('steps') as Step[];
 
   return (
-    <section id="how" className="py-28 md:py-36 bg-bone-light border-t border-ink-faint/40">
+    <section id="how" className="py-24 md:py-28 bg-bone-light border-t border-ink-faint/40">
       <Container>
         <Reveal>
           <Eyebrow label={t('eyebrow')} num="/how" className="mb-10" />

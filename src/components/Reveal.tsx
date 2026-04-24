@@ -11,6 +11,7 @@ type RevealProps = {
   threshold?: number;
   rootMargin?: string;
   once?: boolean;
+  variant?: 'base' | 'slow';
 };
 
 export function Reveal({
@@ -21,6 +22,7 @@ export function Reveal({
   threshold = 0.15,
   rootMargin = '0px 0px -10% 0px',
   once = true,
+  variant = 'base',
 }: RevealProps) {
   const ref = useRef<HTMLElement | null>(null);
   const [inView, setInView] = useState(false);
@@ -83,10 +85,12 @@ export function Reveal({
     ? ({ ['--reveal-delay' as string]: `${delay}ms` } as CSSProperties)
     : undefined;
 
+  const baseClass = variant === 'slow' ? 'reveal-slow' : 'reveal';
+
   return (
     <Tag
       ref={ref as never}
-      className={cn('reveal', inView && 'is-in', className)}
+      className={cn(baseClass, inView && 'is-in', className)}
       style={style}
     >
       {children}

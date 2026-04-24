@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/Container';
 import { LangSwitcher } from '@/components/LangSwitcher';
+import { MarkWordmark } from '@/components/Mark';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -14,10 +15,10 @@ export function Footer() {
           <div>
             <a
               href="#top"
-              className="font-serif italic font-light text-[32px] leading-none text-ink block mb-6"
-              aria-label="Dutch with an Italian Touch"
+              className="block mb-6 text-ink hover:opacity-80 transition-opacity"
+              aria-label="DWAIT — home"
             >
-              d<span className="text-burgundy">·</span>i
+              <MarkWordmark size={28} />
             </a>
             <p className="font-sans text-[14px] leading-[1.7] text-ink-soft max-w-[36ch]">
               {t('tagline')}
